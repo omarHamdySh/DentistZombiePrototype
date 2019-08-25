@@ -7,6 +7,7 @@ public class ToothDecayManager : MonoBehaviour
 {
     Renderer thisToothRenderer;
     PlayerHealth playerHealth;
+    static int TeethHited = 0; 
 
     public List<Material> toothMaterials;
     int indexOfMaterial;
@@ -33,7 +34,9 @@ public class ToothDecayManager : MonoBehaviour
                 nextMatIndex = (toothMaterials.Count - 1);
 
             thisToothRenderer.material = toothMaterials[nextMatIndex];
+            GameManager.Instance.DirtyTeeth.Add(this.gameObject);
             Destroy(collision.gameObject);
+            TeethHited++;
         }
     }
     //private void OnTriggerEnter(Collider other)
