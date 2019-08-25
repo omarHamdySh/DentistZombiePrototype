@@ -2,9 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VRTK;
 
 public class GameManager : MonoBehaviour
 {
+    public VRTK_ControllerEvents controllerEvent;
+    public ParticleSystem toothPasteParticle;
+
     private static GameManager _Instance;
 
     /// <summary>
@@ -19,17 +23,17 @@ public class GameManager : MonoBehaviour
     public List<GameObject> fightingTools;
 
     public List<GameObject> washingTools;
-    
+
     public GameObject enemySpawingPointManager;
     [HideInInspector]
-    public int ScoreToWash=0;
+    public int ScoreToWash = 0;
     private void Update()
     {
         // If the current health is less than or equal to zero...
 
         if (ScoreToWash == 10)
         {
-           gameplayFSMManager.ChangeToWashing();
+            gameplayFSMManager.ChangeToWashing();
         }
     }
     public static GameManager Instance
@@ -44,6 +48,9 @@ public class GameManager : MonoBehaviour
             _Instance = this;
         }
         DontDestroyOnLoad(this.gameObject);
+
+        controllerEvent.TriggerPressed += new ControllerInteractionEventHandler(doTriggerPressed);
+
     }
     public void enableFightingTools()
     {
@@ -74,5 +81,11 @@ public class GameManager : MonoBehaviour
         {
             item.gameObject.SetActive(false);
         }
+    }
+
+    private void doTriggerPressed(object sender, ControllerInteractionEventArgs e)
+    {
+        Debug.Log("TriggerPressed : " + e.buttonPressure);
+        toothPasteParticle.Play();
     }
 }
