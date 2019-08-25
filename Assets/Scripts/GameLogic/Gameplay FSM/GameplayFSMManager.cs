@@ -161,13 +161,13 @@ public class GameplayFSMManager : MonoBehaviour
                 break;
         }
     }
-    public void ChnageToWashing()
+    public void ChangeToWashing()
     {
         DetermineStateTransationDirection(washingState);
         PopState();
         PushState(washingState);
     }
-    public void ChnageToFighting()
+    public void ChangeToFighting()
     {
         DetermineStateTransationDirection(fightingState);
         PopState();

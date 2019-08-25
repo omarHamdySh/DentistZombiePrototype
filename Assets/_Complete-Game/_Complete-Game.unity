@@ -2500,6 +2500,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 173434, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 3}
 --- !u!1 &540099364
@@ -6734,9 +6738,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameplayFSMManager: {fileID: 1618722256}
+  enemyObjects: []
+  DirtyTeeth: []
   enemySpawingPointManager: {fileID: 14871708}
-  changeToGun: {fileID: 0}
-  chnageToController: {fileID: 0}
 --- !u!4 &1618722255
 Transform:
   m_ObjectHideFlags: 0
