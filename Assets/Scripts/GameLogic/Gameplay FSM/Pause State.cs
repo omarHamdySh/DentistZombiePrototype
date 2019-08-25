@@ -15,8 +15,7 @@ public class PauseState : IGameplayState
 
     public void OnStateEnter()
     {
-        //Enable the spawning scripts of the enemies;
-        //Turn off the other states' controllers and turn on this state's controller 
+        
 
     }
     /// <summary>
@@ -36,7 +35,6 @@ public class PauseState : IGameplayState
         /// </summary>
         /// 
 
-        //Disable the spawning scripts of the enemies;
 
     }
 

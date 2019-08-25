@@ -16,8 +16,8 @@ public class FightingState : IGameplayState
     public void OnStateEnter()
     {
         //Enable the spawning scripts of the enemies;
-        //Turn off the other states' controllers and turn on this state's controller 
-
+        //Turn off the other states' controllers and turn on this state's controller
+        GameManager.Instance.enemySpawingPointManager.SetActive(true);
     }
     /// <summary>
     /// Logic of exiting the state goes here.
@@ -35,9 +35,9 @@ public class FightingState : IGameplayState
         /// other logic related to exiting the this state also goes here
         /// </summary>
         /// 
-        
-        //Disable the spawning scripts of the enemies;
 
+        //Disable the spawning scripts of the enemies;
+        GameManager.Instance.enemySpawingPointManager.SetActive(false);
     }
 
     public void OnStateUpdate()

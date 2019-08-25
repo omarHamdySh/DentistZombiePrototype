@@ -34,7 +34,7 @@ public class StateTransition : IGameplayState
         ///     push the next state
         /// other logic related to exiting the this state also goes here
         /// </summary>
-       
+
     }
 
     public void OnStateUpdate()
@@ -49,6 +49,24 @@ public class StateTransition : IGameplayState
             case StateTransitionDirection.FightingToWashing:
                 //if there is any enemy alive wait unil he dies.
                 //else if there is no enemy alive and everything is clean -> change to the intended state.
+                if (GameManager.Instance.enemyObjects.Count == 0)
+                    return;
+                else
+                {
+
+                }
+                break;
+            case StateTransitionDirection.WashingToPause:
+                //if the player click the pause menu and he/she in the washing state
+                break;
+            case StateTransitionDirection.PauseToWashing:
+                //if the player click the resume menu and back to game again but he/she was in the washing state
+                break;
+            case StateTransitionDirection.FightingToPause:
+                //if the player click the pause menu and he/she in the fighting state
+                break;
+            case StateTransitionDirection.PauseToFighting:
+                //if the player click the resume menu and back to game again but he/she was in the fighting state
                 break;
         }
     }

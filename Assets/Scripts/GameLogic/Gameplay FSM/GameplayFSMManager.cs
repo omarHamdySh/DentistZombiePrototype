@@ -13,10 +13,16 @@ public enum GameplayState
 public enum StateTransitionDirection
 {
     WashingToFighting,
-    FightingToWashing
+    WashingToPause,
+    PauseToWashing,
+    FightingToWashing,
+    FightingToPause,
+    PauseToFighting
+
 }
 public class GameplayFSMManager : MonoBehaviour
 {
+    
     /// <summary>
     /// Declaration of dynamic variables for surving the logic goes here.
     /// Eg.
@@ -32,11 +38,11 @@ public class GameplayFSMManager : MonoBehaviour
     /// Declaration of states Instances goes here.
     /// </summary>
     [HideInInspector]
-    public WashingState tycoonState;
+    public WashingState washingState;
     [HideInInspector]
-    public FightingState cutsceneState;
+    public FightingState fightingState;
     [HideInInspector]
-    public StateTransition missionState;
+    public StateTransition stateTransition;
     //public TrainingState trainingState;
     //[HideInInspector]
     //public TutorialState tutorialState;
@@ -48,8 +54,6 @@ public class GameplayFSMManager : MonoBehaviour
 
     [HideInInspector]
     public StateTransitionDirection transitionDirection;
-
-
 
     /// <summary>
     /// Declaration of references will be used for the states logic goes here
@@ -73,32 +77,21 @@ public class GameplayFSMManager : MonoBehaviour
         ///         };
         /// </summary>
 
-        ////Instantiate the first stat
-        //cutsceneState = new CutsceneState()
-        //{
-        //    gameplayFSMManager = this
-        //};
-        //tycoonState = new TycoonState()
-        //{
-        //    gameplayFSMManager = this
-        //};
-        //missionState = new MissionState()
-        //{
-        //    gameplayFSMManager = this
-        //};
-        //trainingState = new TrainingState()
-        //{
-        //    gameplayFSMManager = this
-        //};
-        //tutorialState = new TutorialState()
-        //{
-        //    gameplayFSMManager = this
-        //};
-        //pauseState = new PauseState()
-        //{
-        //    gameplayFSMManager = this
-        //};
-        //PushState(tycoonState);
+        ////Instantiate the first state
+        fightingState = new FightingState()
+        {
+            gameplayFSMManager = this
+        };
+        stateTransition = new StateTransition()
+        {
+            gameplayFSMManager = this
+        };
+        washingState = new WashingState()
+        {
+            gameplayFSMManager = this
+        };
+
+        PushState(fightingState);
     }
 
     // Update is called once per frame
@@ -106,7 +99,6 @@ public class GameplayFSMManager : MonoBehaviour
     {
         stateStack.Peek().OnStateUpdate();
     }
-
 
     public void PopState()
     {
@@ -121,34 +113,72 @@ public class GameplayFSMManager : MonoBehaviour
     /// <summary>
     /// States relative logic goes here.
     /// This logic will be used from inside each state itself.
-    /// </summary>
-
-
-    //public void changeToTycoonState()
-    //{
-    //    PopState();
-    //    PushState(tycoonState);
-    //}
-    //public void changeToCutSceneState()
-    //{
-    //    PopState();
-    //    PushState(cutsceneState);
-    //}
-    //public void changeToMissionState()
-    //{
-    //    PopState();
-    //    PushState(missionState);
-    //}
-    //public void changeToTrainingState()
-    //{
-    //    PopState();
-    //    PushState(trainingState);
-    //}
-    //public void changeToTutorialState()
-    //{
-    //    PopState();
-    //    PushState(tutorialState);
-    //}
+    /// </summary>    
+    public void DetermineStateTransationDirection(IGameplayState nextState)
+    {
+        switch (stateStack.Peek().GetStateName())
+        {
+            case GameplayState.Washing:
+                switch (nextState.GetStateName())
+                {
+                    case GameplayState.Fighting:
+                        transitionDirection = StateTransitionDirection.WashingToFighting;
+                        break;
+                    case GameplayState.Pause:
+                        transitionDirection = StateTransitionDirection.WashingToPause;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case GameplayState.Fighting:
+                switch (nextState.GetStateName())
+                {
+                    case GameplayState.Washing:
+                        transitionDirection = StateTransitionDirection.FightingToWashing;
+                        break;
+                    case GameplayState.Pause:
+                        transitionDirection = StateTransitionDirection.FightingToPause;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case GameplayState.Pause:
+                switch (nextState.GetStateName())
+                {
+                    case GameplayState.Washing:
+                        transitionDirection = StateTransitionDirection.PauseToWashing;
+                        break;
+                    case GameplayState.Fighting:
+                        transitionDirection = StateTransitionDirection.PauseToFighting;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    public void ChnageToWashing()
+    {
+        DetermineStateTransationDirection(washingState);
+        PopState();
+        PushState(washingState);
+    }
+    public void ChnageToFighting()
+    {
+        DetermineStateTransationDirection(fightingState);
+        PopState();
+        PushState(fightingState);
+    }
+    public void ChangeToPause()
+    {
+        DetermineStateTransationDirection(pauseState);
+        PopState();
+        PushState(pauseState);
+    }
     public void pauseGame()
     {
         if (tempFromPause == null)

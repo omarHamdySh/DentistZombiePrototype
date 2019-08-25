@@ -195,7 +195,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &28357257
 GameObject:
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 32598616}
   m_Layer: 0
   m_Name: Cube (15)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -339,7 +339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -438,7 +437,7 @@ GameObject:
   - component: {fileID: 79367590}
   m_Layer: 0
   m_Name: Cube (3)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -527,7 +526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -678,7 +676,7 @@ GameObject:
   - component: {fileID: 212609468}
   m_Layer: 0
   m_Name: Cube (20)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -709,7 +707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -826,7 +823,7 @@ RectTransform:
   m_Children:
   - {fileID: 1979757894}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1403,7 +1400,7 @@ GameObject:
   - component: {fileID: 308322158}
   m_Layer: 0
   m_Name: Cube (16)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -1434,7 +1431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -1682,7 +1678,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &385205435
 GameObject:
@@ -1837,7 +1833,7 @@ Transform:
   - {fileID: 4000011546791979}
   - {fileID: 868682010}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &427831499
 GameObject:
@@ -1855,7 +1851,7 @@ GameObject:
   - component: {fileID: 427831505}
   m_Layer: 0
   m_Name: Cube (2)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -1944,7 +1940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -2169,7 +2164,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480507814
 GameObject:
@@ -2187,7 +2182,7 @@ GameObject:
   - component: {fileID: 480507820}
   m_Layer: 0
   m_Name: Cube (17)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -2218,7 +2213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -2317,7 +2311,7 @@ GameObject:
   - component: {fileID: 500552672}
   m_Layer: 0
   m_Name: Cube (21)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -2348,7 +2342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -2505,7 +2498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495562, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149d6dcc67e8d1240bbc0dd6ddf0c1bd, type: 3}
@@ -2525,7 +2518,7 @@ GameObject:
   - component: {fileID: 540099370}
   m_Layer: 0
   m_Name: Cube (5)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -2614,7 +2607,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -2724,7 +2716,7 @@ GameObject:
   - component: {fileID: 558765075}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -2813,7 +2805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -2949,7 +2940,7 @@ GameObject:
   - component: {fileID: 603886265}
   m_Layer: 0
   m_Name: Cube (13)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -3038,7 +3029,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -3141,7 +3131,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &664994689
 GameObject:
@@ -3341,7 +3331,7 @@ GameObject:
   - component: {fileID: 676450910}
   m_Layer: 0
   m_Name: Cube (10)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -3372,7 +3362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -3710,7 +3699,7 @@ Transform:
   - {fileID: 2099323988}
   - {fileID: 2071061539}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &819960302
 GameObject:
@@ -3802,7 +3791,7 @@ GameObject:
   - component: {fileID: 828950087}
   m_Layer: 0
   m_Name: Cube (22)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -3833,7 +3822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -4646,7 +4634,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000872391
 GameObject:
@@ -4880,7 +4868,7 @@ GameObject:
   - component: {fileID: 1130823151}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -4969,7 +4957,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -5070,7 +5057,7 @@ RectTransform:
   - {fileID: 1434159494}
   - {fileID: 1394906874}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5137,7 +5124,7 @@ GameObject:
   - component: {fileID: 1164456901}
   m_Layer: 0
   m_Name: Cube (11)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -5168,7 +5155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -5303,7 +5289,7 @@ GameObject:
   - component: {fileID: 1239987447}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -5392,7 +5378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -5507,7 +5492,7 @@ GameObject:
   - component: {fileID: 1303021483}
   m_Layer: 0
   m_Name: Cube (4)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -5596,7 +5581,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -5747,7 +5731,7 @@ GameObject:
   - component: {fileID: 1346767238}
   m_Layer: 0
   m_Name: Cube (14)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -5836,7 +5820,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -6046,7 +6029,7 @@ GameObject:
   - component: {fileID: 1414967329}
   m_Layer: 0
   m_Name: Cube (9)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -6077,7 +6060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -6304,7 +6286,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1436453448
 GameObject:
@@ -6322,7 +6304,7 @@ GameObject:
   - component: {fileID: 1436453454}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -6411,7 +6393,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -6543,7 +6524,7 @@ GameObject:
   - component: {fileID: 1472040854}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -6632,7 +6613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -6688,7 +6668,7 @@ Transform:
   - {fileID: 1000872392}
   - {fileID: 758685504}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1591794898
 GameObject:
@@ -6721,8 +6701,69 @@ Transform:
   - {fileID: 1695883714}
   - {fileID: 768239536}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1618722253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618722255}
+  - component: {fileID: 1618722254}
+  - component: {fileID: 1618722256}
+  m_Layer: 0
+  m_Name: Game Manger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1618722254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618722253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17a0a47dc2f4854598589d1102587c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameplayFSMManager: {fileID: 1618722256}
+  enemySpawingPointManager: {fileID: 14871708}
+  changeToGun: {fileID: 0}
+  chnageToController: {fileID: 0}
+--- !u!4 &1618722255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618722253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9739734, y: 1.0124991, z: 0.3513138}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1618722256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618722253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 996ca7e23fae56d4eab17a5f6fce6224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionDirection: 0
 --- !u!199 &1627164937
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -12025,7 +12066,7 @@ GameObject:
   - component: {fileID: 1649041486}
   m_Layer: 0
   m_Name: Cube (23)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -12056,7 +12097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -12360,7 +12400,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1760787698
 GameObject:
@@ -12378,7 +12418,7 @@ GameObject:
   - component: {fileID: 1760787704}
   m_Layer: 0
   m_Name: Cube (12)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -12467,7 +12507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -12583,7 +12622,7 @@ GameObject:
   - component: {fileID: 1831447730}
   m_Layer: 0
   m_Name: Cube (18)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -12614,7 +12653,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
@@ -12884,7 +12922,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1851598983
 MonoBehaviour:
@@ -13177,7 +13215,7 @@ GameObject:
   - component: {fileID: 1992307586}
   m_Layer: 0
   m_Name: Cube (19)
-  m_TagString: Player
+  m_TagString: Tooth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 32
@@ -13208,7 +13246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
   toothMaterials:
   - {fileID: 2100000, guid: 55216bb0a46d9ab4392b7d51d0d59755, type: 2}
   - {fileID: 2100000, guid: 4cda2368365ceac43b306d3fc48a9757, type: 2}
