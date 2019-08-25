@@ -9,10 +9,20 @@ namespace CompleteProject
         public float spawnTime = 3f;            // How long between each spawn.
         public Transform[] spawnPoints;         // An array of the spawn points this enemy can spawn from.
 
+        private float counter = 0;
         void Start ()
         {
             // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.
-            InvokeRepeating ("Spawn", spawnTime, spawnTime);
+            //InvokeRepeating ("Spawn", spawnTime, spawnTime);
+        }
+        private void Update()
+        {
+            counter += Time.deltaTime;
+            if (counter>= spawnTime)
+            {
+                counter = 0;
+                Spawn();
+            }
         }
         void Spawn ()
         {

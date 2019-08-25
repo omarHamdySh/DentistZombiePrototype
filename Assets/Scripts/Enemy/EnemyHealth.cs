@@ -2,6 +2,7 @@
 
 public class EnemyHealth : MonoBehaviour
 {
+    GameplayFSMManager gameplayFSMManager;
     public int startingHealth = 100;
     public int currentHealth;
     public float sinkSpeed = 2.5f;
@@ -52,7 +53,14 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             Death ();
+            GameManager.Instance.ScoreToWash++;
+            Debug.Log(""+GameManager.Instance.ScoreToWash);
         }
+        if(GameManager.Instance.ScoreToWash == 10)
+        {
+            gameplayFSMManager.ChangeToWashing();
+        }
+
     }
 
 
@@ -67,7 +75,6 @@ public class EnemyHealth : MonoBehaviour
         enemyAudio.clip = deathClip;
         enemyAudio.Play ();
     }
-
 
     public void StartSinking ()
     {

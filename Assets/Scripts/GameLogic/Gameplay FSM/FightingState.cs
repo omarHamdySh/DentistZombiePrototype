@@ -18,6 +18,8 @@ public class FightingState : IGameplayState
         //Enable the spawning scripts of the enemies;
         //Turn off the other states' controllers and turn on this state's controller
         GameManager.Instance.enemySpawingPointManager.SetActive(true);
+        GameManager.Instance.enableFightingTools();
+        Debug.Log(this.ToString());
     }
     /// <summary>
     /// Logic of exiting the state goes here.

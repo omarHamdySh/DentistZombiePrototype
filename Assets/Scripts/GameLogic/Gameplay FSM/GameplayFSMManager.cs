@@ -48,7 +48,6 @@ public class GameplayFSMManager : MonoBehaviour
     //public TutorialState tutorialState;
     [HideInInspector]
     public PauseState pauseState;
-
     [HideInInspector]
     public IGameplayState tempFromPause;
 
@@ -90,7 +89,6 @@ public class GameplayFSMManager : MonoBehaviour
         {
             gameplayFSMManager = this
         };
-
         PushState(fightingState);
     }
 
@@ -165,19 +163,21 @@ public class GameplayFSMManager : MonoBehaviour
     {
         DetermineStateTransationDirection(washingState);
         PopState();
-        PushState(washingState);
+        PushState(stateTransition);
     }
     public void ChangeToFighting()
     {
         DetermineStateTransationDirection(fightingState);
         PopState();
-        PushState(fightingState);
+        PushState(stateTransition);
+
     }
     public void ChangeToPause()
     {
         DetermineStateTransationDirection(pauseState);
         PopState();
-        PushState(pauseState);
+        PushState(stateTransition);
+
     }
     public void pauseGame()
     {

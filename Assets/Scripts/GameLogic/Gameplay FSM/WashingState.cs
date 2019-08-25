@@ -16,6 +16,10 @@ public class WashingState : IGameplayState
     public void OnStateEnter()
     {
         //Turn off the other states' controllers and turn on this state's controller 
+        GameManager.Instance.disableFightingTools();
+        GameManager.Instance.enemySpawingPointManager.SetActive(false);
+        GameManager.Instance.enableWashingTools();
+        Debug.Log(this.ToString());
     }
     /// <summary>
     /// Logic of exiting the state goes here.
@@ -32,6 +36,7 @@ public class WashingState : IGameplayState
         ///     push the next state
         /// other logic related to exiting the this state also goes here
         /// </summary>
+        GameManager.Instance.disableWashingTools();
 
     }
 

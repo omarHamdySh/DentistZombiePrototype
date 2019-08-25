@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class StateTransition : IGameplayState
@@ -18,6 +19,7 @@ public class StateTransition : IGameplayState
     {
         //Change controller to be tooth paste and the brush.
         //Stop all Instatiations script and wait for the last enemy to be killed.
+        Debug.Log(this.ToString());
     }
     /// <summary>
     /// Logic of exiting the state goes here.
@@ -49,17 +51,14 @@ public class StateTransition : IGameplayState
                 {
                     //this mean he clean all the teeth
                     gameplayFSMManager.ChangeToFighting();
+                    gameplayFSMManager.PushState(gameplayFSMManager.fightingState);
                 }
                 break;
             case StateTransitionDirection.FightingToWashing:
                 //if there is any enemy alive wait unil he dies.
                 //else if there is no enemy alive and everything is clean -> change to the intended state.
-                if (GameManager.Instance.enemyObjects.Count == 0)
-                    return;
-                else
-                {
-                    gameplayFSMManager.ChangeToWashing();
-                }
+                if (GameManager.Instance.enemyObjects.All(e1 => e1 == null))
+                    gameplayFSMManager.PushState(gameplayFSMManager.washingState);
                 break;
             case StateTransitionDirection.WashingToPause:
                 //if the player click the pause menu and he/she in the washing state
