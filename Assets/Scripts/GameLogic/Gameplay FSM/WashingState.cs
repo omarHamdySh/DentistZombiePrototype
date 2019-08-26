@@ -16,7 +16,6 @@ public class WashingState : IGameplayState
     public void OnStateEnter()
     {
         //Turn off the other states' controllers and turn on this state's controller 
-        GameManager.Instance.disableFightingTools();
         GameManager.Instance.enemySpawingPointManager.SetActive(false);
         GameManager.Instance.enableWashingTools();
         Debug.Log(this.ToString());

@@ -21,12 +21,7 @@ public class FightingState : IGameplayState
         GameManager.Instance.enableFightingTools();
         Debug.Log(this.ToString());
     }
-    /// <summary>
-    /// Logic of exiting the state goes here.
-    ///  Eg.
-    ///     pop the currentstate
-    ///     push the next state
-    /// </summary>
+    
     public void OnStateExit()
     {
         /// <summary>
@@ -40,6 +35,7 @@ public class FightingState : IGameplayState
 
         //Disable the spawning scripts of the enemies;
         GameManager.Instance.enemySpawingPointManager.SetActive(false);
+        GameManager.Instance.disableFightingTools();
     }
 
     public void OnStateUpdate()

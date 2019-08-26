@@ -15,15 +15,9 @@ public class PauseState : IGameplayState
 
     public void OnStateEnter()
     {
-        
-
+        //pause the game        
+        GameManager.Instance.PauseGame();
     }
-    /// <summary>
-    /// Logic of exiting the state goes here.
-    ///  Eg.
-    ///     pop the currentstate
-    ///     push the next state
-    /// </summary>
     public void OnStateExit()
     {
         /// <summary>
@@ -34,8 +28,8 @@ public class PauseState : IGameplayState
         /// other logic related to exiting the this state also goes here
         /// </summary>
         /// 
-
-
+        //resume the game  
+        GameManager.Instance.ResumeGame();
     }
 
     public void OnStateUpdate()

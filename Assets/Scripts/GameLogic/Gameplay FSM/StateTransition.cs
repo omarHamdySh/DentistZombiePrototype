@@ -17,9 +17,6 @@ public class StateTransition : IGameplayState
 
     public void OnStateEnter()
     {
-        //Change controller to be tooth paste and the brush.
-        //Stop all Instatiations script and wait for the last enemy to be killed.
-        Debug.Log(this.ToString());
     }
     /// <summary>
     /// Logic of exiting the state goes here.
@@ -29,14 +26,6 @@ public class StateTransition : IGameplayState
     /// </summary>
     public void OnStateExit()
     {
-        /// <summary>
-        /// Logic of exiting the state goes here.
-        /// Eg.    
-        ///     pop the currentstate
-        ///     push the next state
-        /// other logic related to exiting the this state also goes here
-        /// </summary>
-
     }
 
     public void OnStateUpdate()
@@ -47,7 +36,7 @@ public class StateTransition : IGameplayState
             case StateTransitionDirection.WashingToFighting:
                 //if there are any clues for the washing process like some paste on the teeth or some effect is still working don't do anything.
                 //else if there is nothing and everything is clean -> change to the intended state.
-                if(GameManager.Instance.DirtyTeeth.Count == 0)
+                if (GameManager.Instance.DirtyTeeth.Count == 0)
                 {
                     //this mean he clean all the teeth
                     gameplayFSMManager.ChangeToFighting();
@@ -57,24 +46,29 @@ public class StateTransition : IGameplayState
             case StateTransitionDirection.FightingToWashing:
                 //if there is any enemy alive wait unil he dies.
                 //else if there is no enemy alive and everything is clean -> change to the intended state.
+                GameManager.Instance.enableFightingTools();
                 if (GameManager.Instance.enemyObjects.All(e1 => e1 == null))
+                {
                     gameplayFSMManager.PushState(gameplayFSMManager.washingState);
+                    GameManager.Instance.disableFightingTools();
+                }
                 break;
             case StateTransitionDirection.WashingToPause:
                 //if the player click the pause menu and he/she in the washing state
-                gameplayFSMManager.ChangeToPause();
+
                 break;
             case StateTransitionDirection.PauseToWashing:
                 //if the player click the resume menu and back to game again but he/she was in the washing state
-                gameplayFSMManager.ChangeToWashing();
+
                 break;
             case StateTransitionDirection.FightingToPause:
                 //if the player click the pause menu and he/she in the fighting state
-                gameplayFSMManager.ChangeToPause();
+                GameManager.Instance.disableFightingTools();
+                GameManager.Instance.enemySpawingPointManager.SetActive(false);
                 break;
             case StateTransitionDirection.PauseToFighting:
                 //if the player click the resume menu and back to game again but he/she was in the fighting state
-                gameplayFSMManager.ChangeToFighting();
+                GameManager.Instance.enableFightingTools();
                 break;
         }
     }
@@ -88,5 +82,5 @@ public class StateTransition : IGameplayState
         return stateName;
     }
 
-   
+
 }

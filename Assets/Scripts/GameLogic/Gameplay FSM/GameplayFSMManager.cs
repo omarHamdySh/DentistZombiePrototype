@@ -1,6 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// define the gamepaly states
+/// Transition state controls the the transition between two states
+/// washing state which the player clean the teeth after bacterias attack it (teeth)
+/// fighting state which the start state of the player where he/she defends opposite bacteria
+/// pause state which controling the pause status for opening/closing the menu
+/// </summary>
 public enum GameplayState
 {
     Transition,
@@ -9,7 +17,10 @@ public enum GameplayState
     Pause
 
 }
-
+/// <summary>
+/// state transtition which controling the direction of the state and which state should pass to the second
+/// six probabilities for the transtition states
+/// </summary>
 public enum StateTransitionDirection
 {
     WashingToFighting,
@@ -30,8 +41,7 @@ public class GameplayFSMManager : MonoBehaviour
     ///     public int shootingRange;
     ///     public int alertRange;
     /// </summary>
-
-
+    //define the stack which controlling the current state
     Stack<IGameplayState> stateStack = new Stack<IGameplayState>();
 
     /// <summary>
@@ -43,14 +53,12 @@ public class GameplayFSMManager : MonoBehaviour
     public FightingState fightingState;
     [HideInInspector]
     public StateTransition stateTransition;
-    //public TrainingState trainingState;
-    //[HideInInspector]
-    //public TutorialState tutorialState;
     [HideInInspector]
     public PauseState pauseState;
+    //define a temp to know which the state the player come from it to pause state
     [HideInInspector]
     public IGameplayState tempFromPause;
-
+    //define the varaible of the direction of the states 
     [HideInInspector]
     public StateTransitionDirection transitionDirection;
 
@@ -89,6 +97,12 @@ public class GameplayFSMManager : MonoBehaviour
         {
             gameplayFSMManager = this
         };
+        pauseState = new PauseState()
+        {
+            gameplayFSMManager = this
+        };
+
+        //push the first state for the player
         PushState(fightingState);
     }
 
@@ -97,7 +111,9 @@ public class GameplayFSMManager : MonoBehaviour
     {
         stateStack.Peek().OnStateUpdate();
     }
-
+    /// <summary>
+    /// functions to define the stak functionality
+    /// </summary>
     public void PopState()
     {
         stateStack.Pop().OnStateExit();
@@ -109,9 +125,11 @@ public class GameplayFSMManager : MonoBehaviour
     }
 
     /// <summary>
-    /// States relative logic goes here.
-    /// This logic will be used from inside each state itself.
-    /// </summary>    
+    /// function to determine how the transation will happen in the gameplay
+    /// </summary>
+    /// <param name="nextState">
+    /// a parameter to for the next state which will the gameplay move toward it
+    /// </param>
     public void DetermineStateTransationDirection(IGameplayState nextState)
     {
         switch (stateStack.Peek().GetStateName())
@@ -159,6 +177,9 @@ public class GameplayFSMManager : MonoBehaviour
                 break;
         }
     }
+    /// <summary>
+    /// functions to defining how changing the gameplay state
+    /// </summary>
     public void ChangeToWashing()
     {
         DetermineStateTransationDirection(washingState);
@@ -177,7 +198,6 @@ public class GameplayFSMManager : MonoBehaviour
         DetermineStateTransationDirection(pauseState);
         PopState();
         PushState(stateTransition);
-
     }
     public void pauseGame()
     {
@@ -199,6 +219,7 @@ public class GameplayFSMManager : MonoBehaviour
         }
     }
 
+    //return the current state at the stack
     public GameplayState getCurrentState()
     {
         return stateStack.Peek().GetStateName();
