@@ -65,8 +65,7 @@ namespace CompleteProject
             if (currentHealth <= 0)
             {
                 Death();
-                GameManager.Instance.ScoreToWash++;
-                Debug.Log("" + GameManager.Instance.ScoreToWash);
+                //GameManager.Instance.ScoreToWash++;
             }
         }
 

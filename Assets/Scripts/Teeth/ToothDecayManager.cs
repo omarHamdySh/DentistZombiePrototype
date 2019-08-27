@@ -37,6 +37,7 @@ public class ToothDecayManager : MonoBehaviour
             GameManager.Instance.DirtyTeeth.Add(this.gameObject);
             Destroy(collision.gameObject);
             TeethHited++;
+            GameManager.Instance.ScoreToWash++;
         }
     }
     //private void OnTriggerEnter(Collider other)

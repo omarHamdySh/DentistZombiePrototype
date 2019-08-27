@@ -85,8 +85,8 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void doTriggerPressed(object sender, ControllerInteractionEventArgs e)
     {
-        //generate the toothpaste
-        toothPasteParticle.Play();
+        ////generate the toothpaste
+        //toothPasteParticle.Play();
     }
 
     /// <summary>
