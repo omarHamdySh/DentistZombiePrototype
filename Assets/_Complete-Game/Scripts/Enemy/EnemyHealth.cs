@@ -51,7 +51,7 @@ namespace CompleteProject
                 return;
 
             // Play the hurt sound effect.
-            enemyAudio.Play();
+            //enemyAudio.Play();
 
             // Reduce the current health by the amount of damage sustained.
             currentHealth -= amount;
@@ -64,7 +64,8 @@ namespace CompleteProject
 
             if (currentHealth <= 0)
             {
-                Death();
+                //Death();
+                Destroy(this.gameObject);
                 //GameManager.Instance.ScoreToWash++;
             }
         }

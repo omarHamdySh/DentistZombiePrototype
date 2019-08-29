@@ -12,7 +12,7 @@ namespace CompleteProject
         PlayerHealth playerHealth;      // Reference to the player's health.
         EnemyHealth enemyHealth;        // Reference to this enemy's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
-        int idAttack;
+        int targetIndex;
         public LayerMask layerMask;
         void Awake()
         {
@@ -20,9 +20,9 @@ namespace CompleteProject
             // Set up the references.
             players = GameObject.FindGameObjectsWithTag("Player");
             print(players.Length);
-            idAttack = Random.Range(0, players.Length);
-            playerHealth = players[idAttack].GetComponent<PlayerHealth>();
-            print("id to attack"+idAttack);
+            targetIndex = Random.Range(0, players.Length);
+            playerHealth = players[targetIndex].GetComponentInChildren<PlayerHealth>();
+            print("id to attack"+targetIndex);
             //player = GameObject.FindGameObjectWithTag("Player").transform;
             //playerHealth = player.GetComponent <PlayerHealth> ();
             enemyHealth = GetComponent<EnemyHealth>();
@@ -38,7 +38,7 @@ namespace CompleteProject
                 // ... set the destination of the nav mesh agent to the player.
                 //seting this for multi distination
 
-                nav.SetDestination(players[idAttack].transform.position);
+                nav.SetDestination(players[targetIndex].transform.position);
                // nav.SetDestination(player.position);
             }
             // Otherwise...
