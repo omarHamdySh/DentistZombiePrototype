@@ -6706,8 +6706,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240455253}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.0804005, y: 2.944356, z: -18.1515}
+  m_LocalRotation: {x: 0.18237248, y: 0.72645026, z: 0.21094845, w: -0.62810117}
+  m_LocalPosition: {x: -6.5314198, y: 3.7615392, z: -19.59274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -70688,6 +70688,7 @@ GameObject:
   - component: {fileID: 1015491930288586448}
   - component: {fileID: 1015491930287783678}
   - component: {fileID: 1015491930286816318}
+  - component: {fileID: 1015491930289070833}
   m_Layer: 0
   m_Name: Upper-shield
   m_TagString: Untagged
@@ -70695,6 +70696,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1015491930289070833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015491930289070832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83fec9e76c9fd54da26a41157dbb830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollSpeed: 0.1
 --- !u!1 &1015491930289070840
 GameObject:
   m_ObjectHideFlags: 0
@@ -70760,4 +70774,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83fec9e76c9fd54da26a41157dbb830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: 1
+  scrollSpeed: 0.1
