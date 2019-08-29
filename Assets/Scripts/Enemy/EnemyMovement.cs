@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//Deprecated
 public class EnemyMovement : MonoBehaviour
 {
     Transform player;
