@@ -6,21 +6,23 @@ namespace CompleteProject
     public class EnemyMovement : MonoBehaviour
     {
         //perepare for multi distination
-        GameObject[] player;               // Reference to the player's position.
+        GameObject[] players;               // Reference to the player's position.
 
         //Transform player;               // Reference to the player's position.
         PlayerHealth playerHealth;      // Reference to the player's health.
         EnemyHealth enemyHealth;        // Reference to this enemy's health.
         UnityEngine.AI.NavMeshAgent nav;               // Reference to the nav mesh agent.
         int idAttack;
-
+        public LayerMask layerMask;
         void Awake()
         {
 
             // Set up the references.
-            player = GameObject.FindGameObjectsWithTag("Teeth");
-            idAttack = Random.Range(0, player.Length);
-            playerHealth = player[idAttack].GetComponent<PlayerHealth>();
+            players = GameObject.FindGameObjectsWithTag("Player");
+            print(players.Length);
+            idAttack = Random.Range(0, players.Length);
+            playerHealth = players[idAttack].GetComponent<PlayerHealth>();
+            print("id to attack"+idAttack);
             //player = GameObject.FindGameObjectWithTag("Player").transform;
             //playerHealth = player.GetComponent <PlayerHealth> ();
             enemyHealth = GetComponent<EnemyHealth>();
@@ -35,7 +37,8 @@ namespace CompleteProject
             {
                 // ... set the destination of the nav mesh agent to the player.
                 //seting this for multi distination
-                nav.SetDestination(player[idAttack].transform.position);
+
+                nav.SetDestination(players[idAttack].transform.position);
                // nav.SetDestination(player.position);
             }
             // Otherwise...
@@ -45,5 +48,23 @@ namespace CompleteProject
                 nav.enabled = false;
             }
         }
+        //private void OnCollisionStay(Collision collision)
+        //{
+        //    if (collision.gameObject.tag=="Floor") {
+
+
+        //    }
+        //}
+        //private void OnCollisionExit(Collision collision)
+        //{
+        //    if (collision.gameObject.tag == "Floor")
+        //    {
+
+
+        //    }
+        //}
+
     }
+
+   
 }
