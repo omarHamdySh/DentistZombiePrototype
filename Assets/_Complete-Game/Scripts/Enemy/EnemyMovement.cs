@@ -22,7 +22,7 @@ namespace CompleteProject
             print(players.Length);
             targetIndex = Random.Range(0, players.Length);
             playerHealth = players[targetIndex].GetComponentInChildren<PlayerHealth>();
-            print("id to attack"+targetIndex);
+
             //player = GameObject.FindGameObjectWithTag("Player").transform;
             //playerHealth = player.GetComponent <PlayerHealth> ();
             enemyHealth = GetComponent<EnemyHealth>();
