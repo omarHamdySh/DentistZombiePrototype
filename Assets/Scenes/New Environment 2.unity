@@ -84802,6 +84802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73640e709aa655e49acd8c770524e4c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseButtonText: {fileID: 939881782}
 --- !u!65 &2047487362
 BoxCollider:
   m_ObjectHideFlags: 0

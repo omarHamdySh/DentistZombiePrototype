@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     private static GameManager _Instance;                               //reference for this script to access it from another place to manage/control his variables and function
     public VRTK_ControllerEvents controllerEvent;                       //reference for controller events script on controller gameobject           
     public ParticleSystem toothPasteParticle;                           //reference for the particle of toothpaste to a
-    public Text pauseButtonText;                                        //reference for text field of the button of pause to switch the mode from pause to resume and the opposite also
     public GameplayFSMManager gameplayFSMManager;                       //reference for the state machine controller to access his state
     public List<GameObject> enemyObjects = new List<GameObject>();      //variable to store the enemy gameobjects to control it while pausing the scene and other functionality 
     public List<GameObject> DirtyTeeth = new List<GameObject>();        //variable for the hited teeth by bacteria
