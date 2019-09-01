@@ -20,7 +20,9 @@ public class GameManager : MonoBehaviour
     public GameObject enemySpawingPointManager;                         //refernce for the spawing point controller which generating enemy in the scene
     [HideInInspector]
     public int ScoreToWash = 0;                                         //the score which use for translte the state from the fighting to washing
-
+    public PlayerScoreManager playerScoreManager;                       //reference for the text of the player score to update the ui
+    [HideInInspector]
+    public int enemykilledScore = 0;                                    //the score which increase when the player hit the enemies
     private void Update()
     {
         // If the current health is less than or equal to zero...

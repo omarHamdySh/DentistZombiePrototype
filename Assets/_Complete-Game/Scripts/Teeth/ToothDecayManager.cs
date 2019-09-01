@@ -7,7 +7,7 @@ public class ToothDecayManager : MonoBehaviour
 {
     Renderer thisToothRenderer;
     PlayerHealth playerHealth;
-    static int TeethHited = 0; 
+    static int TeethHited = 0;
 
     public List<Material> toothMaterials;
     int indexOfMaterial;
@@ -15,7 +15,7 @@ public class ToothDecayManager : MonoBehaviour
     {
         thisToothRenderer = GetComponent<Renderer>();
         playerHealth = GetComponent<PlayerHealth>();
-     
+
     }
     private void OnCollisionEnter(Collision collision)
     {

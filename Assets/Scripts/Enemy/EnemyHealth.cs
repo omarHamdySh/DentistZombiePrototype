@@ -53,8 +53,8 @@ public class EnemyHealth : MonoBehaviour
         if(currentHealth <= 0)
         {
             Death ();
-            GameManager.Instance.ScoreToWash++;
-            Debug.Log(""+GameManager.Instance.ScoreToWash);
+            //GameManager.Instance.ScoreToWash++;
+            //Debug.Log(""+GameManager.Instance.ScoreToWash);
         }
         if(GameManager.Instance.ScoreToWash == 10)
         {

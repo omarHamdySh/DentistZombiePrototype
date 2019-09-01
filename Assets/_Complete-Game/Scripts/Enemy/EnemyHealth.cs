@@ -65,6 +65,9 @@ namespace CompleteProject
             if (currentHealth <= 0)
             {
                 //Death();
+                GameManager.Instance.enemykilledScore++;
+                GameManager.Instance.playerScoreManager.UpdateScoreText();
+
                 Destroy(this.gameObject);
                 //GameManager.Instance.ScoreToWash++;
             }
@@ -104,6 +107,13 @@ namespace CompleteProject
 
             // After 2 seconds destory the enemy.
             Destroy(gameObject, 2f);
+        }
+
+        public void DetermineTheDistanceBetweenPlayerAndEnemy()
+        {
+
+           // Vector3 distance = Vector3.Distance();
+
         }
     }
 }
