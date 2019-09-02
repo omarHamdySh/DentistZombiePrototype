@@ -7,8 +7,16 @@ using UnityEngine.UI;
 using UnityEngine.AI;
 using CompleteProject;
 
+public enum GameLevel
+{
+    Level1,
+    Level2,
+    Level3
+}
 public class GameManager : MonoBehaviour
 {
+
+    GameLevel currentLevel;
     private static GameManager _Instance;                               //reference for this script to access it from another place to manage/control his variables and function
     public VRTK_ControllerEvents controllerEvent;                       //reference for controller events script on controller gameobject           
     public ParticleSystem toothPasteParticle;                           //reference for the particle of toothpaste to a
@@ -19,15 +27,21 @@ public class GameManager : MonoBehaviour
     public List<GameObject> washingTools;                               //reference for the washing tool as toothpaste,toothbrush,...
     public GameObject enemySpawingPointManager;                         //refernce for the spawing point controller which generating enemy in the scene
     [HideInInspector]
-    public int ScoreToWash = 0;                                         //the score which use for translte the state from the fighting to washing
+    public int maximumEnemyHits = 0;                                         //the score which use for translte the state from the fighting to washing
     public PlayerScoreManager playerScoreManager;                       //reference for the text of the player score to update the ui
     [HideInInspector]
     public int enemykilledScore = 0;                                    //the score which increase when the player hit the enemies
+
+    public GameEvent OnWashingFinish;
+    public GameEvent OnSheildActivation;
+    public GameEvent OnSheildDeactivation;
+
     private void Update()
     {
         // If the current health is less than or equal to zero...
-        if (ScoreToWash >= 10)
+        if (maximumEnemyHits >= 10)
         {
+            maximumEnemyHits = 0;
             gameplayFSMManager.ChangeToWashing();
         }
     }
@@ -46,6 +60,13 @@ public class GameManager : MonoBehaviour
 
         controllerEvent.TriggerPressed += new ControllerInteractionEventHandler(doTriggerPressed);
 
+    }
+    private void Start()
+    {
+        currentLevel = GameLevel.Level1;
+        print(currentLevel);
+        MoveToTheNextLevel();
+        print(currentLevel);
     }
 
     /// <summary>
@@ -141,5 +162,33 @@ public class GameManager : MonoBehaviour
         /// Time.timeScale = 1;
         ///
         #endregion
+    }
+
+    public void declareWashingProcessEnd() {
+        print("Washing process has ended");
+        ToothDecayManager.isSheildActivated = true;
+        OnWashingFinish.Raise();
+        OnSheildActivation.Raise();
+    }
+    /// <summary>
+    /// this methods returns the index of specific level in the enum
+    /// </summary>
+    /// <param name="level"></param>
+    /// <returns></returns>
+    public int GetLevelIndex(GameLevel level)
+    {
+        var states = Enum.GetValues(typeof(GameLevel));
+        foreach (var item in states)
+        {
+            if( (GameLevel) item == level)
+            {
+                return(int) item;
+            }
+        }
+        return -1;
+    }
+    public void MoveToTheNextLevel()
+    {
+        currentLevel = (GameLevel) GetLevelIndex(currentLevel)+1;
     }
 }

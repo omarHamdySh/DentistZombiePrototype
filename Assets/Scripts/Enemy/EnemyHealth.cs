@@ -56,7 +56,7 @@ public class EnemyHealth : MonoBehaviour
             //GameManager.Instance.ScoreToWash++;
             //Debug.Log(""+GameManager.Instance.ScoreToWash);
         }
-        if(GameManager.Instance.ScoreToWash == 10)
+        if(GameManager.Instance.maximumEnemyHits == 10)
         {
             gameplayFSMManager.ChangeToWashing();
         }
