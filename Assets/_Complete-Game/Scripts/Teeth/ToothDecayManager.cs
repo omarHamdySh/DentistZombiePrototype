@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ToothDecayManager : MonoBehaviour
 {
+    public static ToothDecayManager instance;
     Renderer thisToothRenderer;
     PlayerHealth playerHealth;
     static int TeethHited = 0;
@@ -18,11 +19,15 @@ public class ToothDecayManager : MonoBehaviour
     float washingSecondsTimer;
     public int washingSpeed;
 
+    //When the sheild is activated don't consider the enemy attacks.
+    public static bool isSheildActivated;
+
     //Variables for test and must be removed later on.
     public bool testingBrushes;
     public TextMeshProUGUI testText;
     private void Start()
     {
+        instance = GetComponent<ToothDecayManager>();
         thisToothRenderer = GetComponent<Renderer>();
         playerHealth = GetComponent<PlayerHealth>();
 
@@ -30,8 +35,15 @@ public class ToothDecayManager : MonoBehaviour
         if (testingBrushes)
         {
             thisToothRenderer.material = toothMaterials[Random.Range(1, 5)];
+            GameManager.Instance.DirtyTeeth.Add(this.gameObject);
             testText.text = "Is not Washing";
 
+        }
+        else
+        {
+            indexOfMaterial = 1;
+            thisToothRenderer.material = toothMaterials[indexOfMaterial];
+            GameManager.Instance.DirtyTeeth.Add(this.gameObject);
         }
     }
 
@@ -43,6 +55,11 @@ public class ToothDecayManager : MonoBehaviour
 
         //    thisToothRenderer.material = toothMaterials[nextMatIndex];
         //}
+        if (isSheildActivated)
+        {
+            return;
+        }
+
         if (collision.gameObject.tag == "Enemy")
         {
             //int nextMatIndex = toothMaterials.IndexOf(thisToothRenderer.material) < (toothMaterials.Count - 1) ? toothMaterials.IndexOf(thisToothRenderer.material) + 1 : (toothMaterials.Count - 1);
@@ -55,7 +72,7 @@ public class ToothDecayManager : MonoBehaviour
             GameManager.Instance.DirtyTeeth.Add(this.gameObject);
             Destroy(collision.gameObject);                          //Destroy the enemy game object that has collided with the tooth.
             TeethHited++;
-            GameManager.Instance.ScoreToWash++;
+            GameManager.Instance.maximumEnemyHits++;
         }
 
     }
@@ -111,22 +128,7 @@ public class ToothDecayManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "ToothPaste")
-        {
-            testText.text = "Is Washing";
-            if (washingSecondsTimer >= (washingSpeed))
-            {
-                int nextMatIndex = --indexOfMaterial;
-                if (nextMatIndex <= 0)
-                {
-                    nextMatIndex = 0;
-                    GameManager.Instance.DirtyTeeth.Remove(this.gameObject);
-                }
-                thisToothRenderer.material = toothMaterials[nextMatIndex];
 
-            }
-            toothIsBeingWashed = true;
-        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -135,18 +137,33 @@ public class ToothDecayManager : MonoBehaviour
         {
             testText.text = "Is Washing";
             toothIsBeingWashed = true;
-            if (washingSecondsTimer >= ( washingSpeed))
+            if (washingSecondsTimer >= (washingSpeed))
             {
-                int nextMatIndex = --indexOfMaterial;
-                if (nextMatIndex <= 0)
-                {
-                    nextMatIndex = 0;
-                    GameManager.Instance.DirtyTeeth.Remove(this.gameObject);
-                }
-                thisToothRenderer.material = toothMaterials[nextMatIndex];
+                //int nextMatIndex = --indexOfMaterial;
+                //if (nextMatIndex <= 0)
+                //{
+                //nextMatIndex = 0;
+                //GameManager.Instance.DirtyTeeth.Remove(this.gameObject);
+                //}
+                CleaningTooth();
 
             }
         }
+    }
+
+    private void CleaningTooth()
+    {
+        foreach (var item in GameManager.Instance.DirtyTeeth)
+        {
+            if (item != this.gameObject)
+            {
+                var rend = item.GetComponent<Renderer>();
+                rend.material = toothMaterials[0];
+                GameManager.Instance.DirtyTeeth.Remove(item);
+            }
+        }
+        thisToothRenderer.material = toothMaterials[0];
+        GameManager.Instance.DirtyTeeth.Remove(this.gameObject);
     }
 
     private void OnTriggerExit(Collider other)
@@ -159,4 +176,14 @@ public class ToothDecayManager : MonoBehaviour
         }
     }
 
+    public void OnSheildActivation()
+    {
+        //print("sheild is activated");
+        //isSheildActivated = true;
+    }
+    public void OnSheildDeactivation()
+    {
+        //print("sheild is disactivated");
+        //isSheildActivated = false;
+    }
 }

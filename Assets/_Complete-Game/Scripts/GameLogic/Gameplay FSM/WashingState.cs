@@ -42,7 +42,13 @@ public class WashingState : IGameplayState
     public void OnStateUpdate()
     {
         //Follow patroling path route.
-
+        if (GameManager.Instance.DirtyTeeth.Count<=0)
+        {
+            GameManager.Instance.declareWashingProcessEnd();
+            //Activate the shield.
+            //Change the state back again to fighting state.
+        }
+        
     }
     string ToString()
     {
