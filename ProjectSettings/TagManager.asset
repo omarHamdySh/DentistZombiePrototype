@@ -9,6 +9,8 @@ TagManager:
   - ButtonLaser
   - ToothPaste
   - Test
+  - Teeth
+  - HiddenLaser
   layers:
   - Default
   - TransparentFX

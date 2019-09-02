@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         // If the current health is less than or equal to zero...
-        if (ScoreToWash == 10)
+        if (ScoreToWash >= 10)
         {
             gameplayFSMManager.ChangeToWashing();
         }
