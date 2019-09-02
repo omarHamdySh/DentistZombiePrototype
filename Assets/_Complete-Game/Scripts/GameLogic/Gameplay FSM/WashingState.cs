@@ -42,6 +42,7 @@ public class WashingState : IGameplayState
     public void OnStateUpdate()
     {
         //Follow patroling path route.
+
     }
     string ToString()
     {

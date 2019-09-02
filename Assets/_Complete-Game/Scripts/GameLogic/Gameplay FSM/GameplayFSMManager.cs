@@ -103,7 +103,7 @@ public class GameplayFSMManager : MonoBehaviour
         };
 
         //push the first state for the player
-        PushState(pauseState);
+        PushState(washingState);
     }
 
     // Update is called once per frame
