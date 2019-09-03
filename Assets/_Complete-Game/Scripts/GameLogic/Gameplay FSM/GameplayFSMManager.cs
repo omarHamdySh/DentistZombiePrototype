@@ -125,7 +125,9 @@ public class GameplayFSMManager : MonoBehaviour
     {
         newState.OnStateEnter();
         stateStack.Push(newState);
-        currentStateTxt.text = stateStack.Peek().ToString();
+
+        if (currentStateTxt)
+            currentStateTxt.text = stateStack.Peek().ToString();
     }
 
     /// <summary>

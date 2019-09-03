@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
+using TMPro;
 using UnityEngine.UI;
 using UnityEngine.AI;
 using CompleteProject;
@@ -32,6 +33,9 @@ public class GameManager : MonoBehaviour
     public PlayerScoreManager playerScoreManager;                       //reference for the text of the player score to update the ui
     [HideInInspector]
     public int enemykilledScore = 0;                                    //the score which increase when the player hit the enemies
+
+    public TextMeshProUGUI currentLevelInfoLabel;
+    public TextMeshProUGUI speedEnemyInfoLabel;
 
     public GameEvent OnWashingFinish;
     public GameEvent OnSheildActivation;
@@ -190,10 +194,15 @@ public class GameManager : MonoBehaviour
     {
         currentLevel = (GameLevel)GetLevelIndex(currentLevel) + 1;
         LevelManager.Instance.incrementEnemySpwanTime();
+
+        if (currentLevelInfoLabel)
+            currentLevelInfoLabel.text = currentLevel.ToString();
+
         switch (currentLevel)
         {
             case GameLevel.Level1:
                 LevelManager.Instance.enemySpeed = LevelManager.Instance.level1EnemySpeed;
+
                 break;
             case GameLevel.Level2:
                 LevelManager.Instance.enemySpeed = LevelManager.Instance.level2EnemySpeed;
@@ -204,5 +213,7 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+        if (speedEnemyInfoLabel)
+            speedEnemyInfoLabel.text = LevelManager.Instance.enemySpeed.ToString();
     }
 }

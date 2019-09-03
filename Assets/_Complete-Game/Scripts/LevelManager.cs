@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CompleteProject;
+using TMPro;
+
 public class LevelManager : MonoBehaviour
 {
 
@@ -15,6 +17,7 @@ public class LevelManager : MonoBehaviour
     public float multiplySpwanTime;
 
     private static LevelManager _Instance;
+    public TextMeshProUGUI currentSpwanInfoLabel;
 
     public static LevelManager Instance
     {
@@ -33,6 +36,8 @@ public class LevelManager : MonoBehaviour
         foreach (var item in enemyManagerScripts)
         {
             item.spawnTime *= multiplySpwanTime;
+            if (currentSpwanInfoLabel)
+                currentSpwanInfoLabel.text ="Speed Time is "+ item.spawnTime.ToString();
         }
     }
 }
