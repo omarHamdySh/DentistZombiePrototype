@@ -55,11 +55,16 @@ public class StateTransition : IGameplayState
                 break;
             case StateTransitionDirection.WashingToPause:
                 //if the player click the pause menu and he/she in the washing state
-
+                if (GameManager.Instance.DirtyTeeth.Count == 0)
+                {
+                    //this mean he clean all the teeth
+                    gameplayFSMManager.ChangeToFighting();
+                    gameplayFSMManager.PushState(gameplayFSMManager.fightingState);
+                }
                 break;
             case StateTransitionDirection.PauseToWashing:
                 //if the player click the resume menu and back to game again but he/she was in the washing state
-
+                gameplayFSMManager.PushState(gameplayFSMManager.washingState);
                 break;
             case StateTransitionDirection.FightingToPause:
                 //if the player click the pause menu and he/she in the fighting state

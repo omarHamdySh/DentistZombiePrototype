@@ -32,4 +32,9 @@ public class SwitchEvent : MonoBehaviour
             GameManager.Instance.gameplayFSMManager.pauseGame();
         }
     }
+
+    public void StartGame()
+    {
+        GameManager.Instance.gameplayFSMManager.ChangeToWashing();
+    }
 }

@@ -36,7 +36,10 @@ public class ToothDecayManager : MonoBehaviour
         {
             thisToothRenderer.material = toothMaterials[Random.Range(1, 5)];
             GameManager.Instance.DirtyTeeth.Add(this.gameObject);
-            testText.text = "Is not Washing";
+            if (testText)
+            {
+                testText.text = "Is not Washing";
+            }
 
         }
         else
@@ -83,7 +86,8 @@ public class ToothDecayManager : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        testText.text = "Is not washing";
+        if (testText)
+            testText.text = "Is not washing";
 
         if (collision.gameObject.tag == "ToothPaste")
         {
@@ -135,7 +139,8 @@ public class ToothDecayManager : MonoBehaviour
     {
         if (other.gameObject.tag == "ToothPaste")
         {
-            testText.text = "Is Washing";
+            if (testText)
+                testText.text = "Is Washing";
             toothIsBeingWashed = true;
             if (washingSecondsTimer >= (washingSpeed))
             {
@@ -170,7 +175,8 @@ public class ToothDecayManager : MonoBehaviour
     {
         if (other.gameObject.tag == "ToothPaste")
         {
-            testText.text = "Is not Washing";
+            if (testText)
+                testText.text = "Is not Washing";
             toothIsBeingWashed = false;
             washingSecondsTimer = 0;
         }

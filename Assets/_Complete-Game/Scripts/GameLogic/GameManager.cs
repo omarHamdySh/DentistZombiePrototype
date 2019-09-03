@@ -9,6 +9,7 @@ using CompleteProject;
 
 public enum GameLevel
 {
+    level0,
     Level1,
     Level2,
     Level3
@@ -63,10 +64,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        currentLevel = GameLevel.Level1;
-        print(currentLevel);
-        MoveToTheNextLevel();
-        print(currentLevel);
+        currentLevel = GameLevel.level0;
     }
 
     /// <summary>
@@ -164,7 +162,8 @@ public class GameManager : MonoBehaviour
         #endregion
     }
 
-    public void declareWashingProcessEnd() {
+    public void declareWashingProcessEnd()
+    {
         print("Washing process has ended");
         ToothDecayManager.isSheildActivated = true;
         OnWashingFinish.Raise();
@@ -180,15 +179,30 @@ public class GameManager : MonoBehaviour
         var states = Enum.GetValues(typeof(GameLevel));
         foreach (var item in states)
         {
-            if( (GameLevel) item == level)
+            if ((GameLevel)item == level)
             {
-                return(int) item;
+                return (int)item;
             }
         }
         return -1;
     }
     public void MoveToTheNextLevel()
     {
-        currentLevel = (GameLevel) GetLevelIndex(currentLevel)+1;
+        currentLevel = (GameLevel)GetLevelIndex(currentLevel) + 1;
+        LevelManager.Instance.incrementEnemySpwanTime();
+        switch (currentLevel)
+        {
+            case GameLevel.Level1:
+                LevelManager.Instance.enemySpeed = LevelManager.Instance.level1EnemySpeed;
+                break;
+            case GameLevel.Level2:
+                LevelManager.Instance.enemySpeed = LevelManager.Instance.level2EnemySpeed;
+                break;
+            case GameLevel.Level3:
+                LevelManager.Instance.enemySpeed = LevelManager.Instance.level3EnemySpeed;
+                break;
+            default:
+                break;
+        }
     }
 }

@@ -15,6 +15,7 @@ public class WashingState : IGameplayState
 
     public void OnStateEnter()
     {
+        GameManager.Instance.MoveToTheNextLevel();
         //Turn off the other states' controllers and turn on this state's controller 
         GameManager.Instance.enemySpawingPointManager.SetActive(false);
         GameManager.Instance.enableWashingTools();
