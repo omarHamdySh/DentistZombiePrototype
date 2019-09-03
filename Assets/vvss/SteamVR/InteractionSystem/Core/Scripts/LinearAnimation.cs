@@ -15,7 +15,7 @@ namespace Valve.VR.InteractionSystem
 		public LinearMapping linearMapping;
 		public new Animation animation;
 
-		private AnimationState animState;
+		private UnityEngine.AnimationState animState;
 		private float animLength;
 		private float lastValue;
 
