@@ -9,10 +9,8 @@ public class TextTypingAnimation : MonoBehaviour
     public float letterWritingSpeed = 0.01f;
     //Message that will displays till the end that will come out letter by letter
     private string strmessage;
-    [HideInInspector]
     //Text for the message to display
     public Text contentTxt;
-    [HideInInspector]
     public Text headerTxt;
 
 

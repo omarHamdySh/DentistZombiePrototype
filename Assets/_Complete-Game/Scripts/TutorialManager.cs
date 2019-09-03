@@ -7,8 +7,9 @@ public class TutorialManager : MonoBehaviour
 
     public static TutorialManager _Instance;
 
-    [HideInInspector]
+    //[HideInInspector]
     public List<TutorialEntity> tutorialEntities = new List<TutorialEntity>();
+    private Queue<TutorialEntity> EntitiesQueue = new Queue<TutorialEntity>();
     public AnimationFSM avatarAnimationFSM;
     public TextTypingAnimation textTypingAnimator;
 
@@ -25,9 +26,15 @@ public class TutorialManager : MonoBehaviour
     }
     private void Start()
     {
-        foreach (Transform item in transform)
+        foreach (var item in tutorialEntities)
         {
-            tutorialEntities.Add(item.gameObject.GetComponent<TutorialEntity>());
+            EntitiesQueue.Enqueue(item.gameObject.GetComponent<TutorialEntity>());
         }
     }
+
+    public void PlayNextSequence() {
+        EntitiesQueue.Dequeue().playSequence();
+    }
+
+
 }
