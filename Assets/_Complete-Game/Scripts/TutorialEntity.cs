@@ -4,5 +4,16 @@ using UnityEngine;
 
 public class TutorialEntity : MonoBehaviour
 {
-    
+    public AnimationState animationClip;
+    public AudioSource audioSource;
+    public string messageHeader;
+    public string messageContent;
+
+
+    public void playSequence()
+    {
+        TutorialManager.Instance.avatarAnimationFSM.activateThisAnimationStateState(animationClip);
+        audioSource.Play();
+        TutorialManager.Instance.textTypingAnimator.Play(messageHeader, messageContent);
+    }
 }
