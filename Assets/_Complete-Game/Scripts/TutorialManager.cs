@@ -7,7 +7,10 @@ public class TutorialManager : MonoBehaviour
 
     public static TutorialManager _Instance;
 
-    public List<TutorialEntity> tutorialEntities;
+    [HideInInspector]
+    public List<TutorialEntity> tutorialEntities = new List<TutorialEntity>();
+    public AnimationFSM avatarAnimationFSM;
+    public TextTypingAnimation textTypingAnimator;
 
     public static TutorialManager Instance
     {

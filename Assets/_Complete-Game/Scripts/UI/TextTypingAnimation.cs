@@ -4,27 +4,17 @@ using System.Collections;
 
 public class TextTypingAnimation : MonoBehaviour
 {
-	public IEnumerator currentcourtine;
+    public IEnumerator currentcourtine;
     //Time taken for each letter to appear (The lower it is, the faster each letter appear)
-    public float letterPaused = 0.01f;
+    public float letterWritingSpeed = 0.01f;
     //Message that will displays till the end that will come out letter by letter
-    public string strmessage;
+    private string strmessage;
+    [HideInInspector]
     //Text for the message to display
-    public Text textComp;
-    public Text LabelName;
+    public Text contentTxt;
+    [HideInInspector]
+    public Text headerTxt;
 
-    // Use this for initialization
-    void Start()
-    {
-        //Get text component
-        textComp = GetComponent<Text>();
-        //Message will display will be at Text
-        strmessage = textComp.text;
-        //Set the text to be blank first
-        textComp.text = "";
-        //Call the function and expect yield to return
-        //StartCoroutine(TypeText());
-    }
 
     IEnumerator TypeText()
     {
@@ -32,17 +22,25 @@ public class TextTypingAnimation : MonoBehaviour
 
         foreach (char letter in strmessage.ToCharArray())
         {
+            if (contentTxt)
+            {
+                contentTxt.text += letter;
+            }
             //Add 1 letter each
-            textComp.text += letter;
             yield return 0;
-            yield return new WaitForSeconds(letterPaused);
+            yield return new WaitForSeconds(letterWritingSpeed);
         }
     }
-    public void TextStart(string massage, string labelname)
+    public void Play( string headerStr, string massage)
     {
-        LabelName.text = "";
-        LabelName.text = labelname;
-        textComp.text = "";
+        if (headerTxt) {
+            headerTxt.text = "";
+            headerTxt.text = headerStr;
+        }
+        if (contentTxt)
+        {
+            contentTxt.text = "";
+        }
         strmessage = "";
         strmessage = massage;
         if (currentcourtine != null)
@@ -51,8 +49,6 @@ public class TextTypingAnimation : MonoBehaviour
         }
         currentcourtine = TypeText();
         StartCoroutine(currentcourtine);
-
-
     }
 
 }
