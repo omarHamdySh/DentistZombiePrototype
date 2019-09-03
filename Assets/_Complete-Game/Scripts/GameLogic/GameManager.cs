@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         controllerEvent.TriggerPressed += new ControllerInteractionEventHandler(doTriggerPressed);
-
     }
     private void Start()
     {
