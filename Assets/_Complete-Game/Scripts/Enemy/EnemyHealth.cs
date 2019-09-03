@@ -66,7 +66,7 @@ namespace CompleteProject
             {
                 //Death();
                 GameManager.Instance.enemykilledScore++;
-                //GameManager.Instance.playerScoreManager.UpdateScoreText();
+                GameManager.Instance.playerScoreManager.UpdateScoreText();
 
                 Destroy(this.gameObject);
                 //GameManager.Instance.ScoreToWash++;

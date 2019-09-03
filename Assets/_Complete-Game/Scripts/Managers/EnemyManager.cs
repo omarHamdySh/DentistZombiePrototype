@@ -38,6 +38,7 @@ namespace CompleteProject
 
             // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
             var enemyObject = Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+            enemyObject.GetComponent<UnityEngine.AI.NavMeshAgent>().speed = LevelManager.Instance.enemySpeed;
             GameManager.Instance.enemyObjects.Add(enemyObject);
         }
     }

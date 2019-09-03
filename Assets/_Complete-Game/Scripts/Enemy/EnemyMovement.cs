@@ -16,7 +16,6 @@ namespace CompleteProject
         public LayerMask layerMask;
         void Awake()
         {
-
             // Set up the references.
             players = GameObject.FindGameObjectsWithTag("Player");
             print(players.Length);

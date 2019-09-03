@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 /// <summary>
@@ -33,7 +34,9 @@ public enum StateTransitionDirection
 }
 public class GameplayFSMManager : MonoBehaviour
 {
-    
+    //Debug Variables
+    public TextMeshProUGUI currentStateTxt;
+
     /// <summary>
     /// Declaration of dynamic variables for surving the logic goes here.
     /// Eg.
@@ -103,7 +106,7 @@ public class GameplayFSMManager : MonoBehaviour
         };
 
         //push the first state for the player
-        PushState(washingState);
+        PushState(pauseState);
     }
 
     // Update is called once per frame
@@ -122,6 +125,7 @@ public class GameplayFSMManager : MonoBehaviour
     {
         newState.OnStateEnter();
         stateStack.Push(newState);
+        currentStateTxt.text = stateStack.Peek().ToString();
     }
 
     /// <summary>
