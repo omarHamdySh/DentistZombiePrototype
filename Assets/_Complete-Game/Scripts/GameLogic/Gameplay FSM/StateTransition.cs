@@ -38,7 +38,6 @@ public class StateTransition : IGameplayState
                 //else if there is nothing and everything is clean -> change to the intended state.
                 if (GameManager.Instance.DirtyTeeth.Count == 0)
                 {
-                    TutorialManager.Instance.PlayNextSequence();
                     //this mean he clean all the teeth
                     gameplayFSMManager.ChangeToFighting();
                     gameplayFSMManager.PushState(gameplayFSMManager.fightingState);
@@ -52,7 +51,6 @@ public class StateTransition : IGameplayState
                 {
                     gameplayFSMManager.PushState(gameplayFSMManager.washingState);
                     GameManager.Instance.disableFightingTools();
-                    TutorialManager.Instance.PlayNextSequence();
                 }
                 break;
             case StateTransitionDirection.WashingToPause:

@@ -13,7 +13,11 @@ public class TutorialEntity : MonoBehaviour
     public void playSequence()
     {
         TutorialManager.Instance.avatarAnimationFSM.activateThisAnimationStateState(animationClip);
-        audioSource.Play();
+        if (audioSource)
+        {
+            if (audioSource.clip != null)
+                audioSource.Play();
+        }
         TutorialManager.Instance.textTypingAnimator.Play(messageHeader, messageContent);
     }
 }
