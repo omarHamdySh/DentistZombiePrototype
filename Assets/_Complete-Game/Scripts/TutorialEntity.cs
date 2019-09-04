@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class TutorialEntity : MonoBehaviour
 {
+    public TutorialEvent tutorialEvent;
     public AnimationState animationClip;
     public AudioSource audioSource;
     public string messageHeader;

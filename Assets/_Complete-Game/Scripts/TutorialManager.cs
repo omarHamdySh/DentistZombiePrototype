@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum TutorialEvent
+{
 
+
+}
 public class TutorialManager : MonoBehaviour
 {
 
@@ -10,6 +14,7 @@ public class TutorialManager : MonoBehaviour
     //[HideInInspector]
     public List<TutorialEntity> tutorialEntities = new List<TutorialEntity>();
     private Queue<TutorialEntity> EntitiesQueue = new Queue<TutorialEntity>();
+    private Dictionary<TutorialEvent, TutorialEntity> tutorialMap = new Dictionary<TutorialEvent, TutorialEntity>();
     public AnimationFSM avatarAnimationFSM;
     public TextTypingAnimation textTypingAnimator;
 
