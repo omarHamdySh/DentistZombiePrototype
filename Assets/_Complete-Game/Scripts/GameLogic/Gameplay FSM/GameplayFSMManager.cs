@@ -16,7 +16,6 @@ public enum GameplayState
     Washing,
     Fighting,
     Pause
-
 }
 /// <summary>
 /// state transtition which controling the direction of the state and which state should pass to the second
