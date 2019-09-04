@@ -119,7 +119,8 @@ public class GameplayFSMManager : MonoBehaviour
     /// </summary>
     public void PopState()
     {
-        stateStack.Pop().OnStateExit();
+        if (stateStack.Count > 0)
+            stateStack.Pop().OnStateExit();
     }
     public void PushState(IGameplayState newState)
     {

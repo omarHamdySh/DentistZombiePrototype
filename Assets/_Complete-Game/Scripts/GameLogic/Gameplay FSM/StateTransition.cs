@@ -38,8 +38,10 @@ public class StateTransition : IGameplayState
                 //else if there is nothing and everything is clean -> change to the intended state.
                 if (GameManager.Instance.DirtyTeeth.Count == 0)
                 {
+                    TutorialManager.Instance.PlayNextSequence();
                     //this mean he clean all the teeth
                     gameplayFSMManager.ChangeToFighting();
+                    gameplayFSMManager.PopState();
                     gameplayFSMManager.PushState(gameplayFSMManager.fightingState);
                 }
                 break;
@@ -49,6 +51,8 @@ public class StateTransition : IGameplayState
                 GameManager.Instance.enableFightingTools();
                 if (GameManager.Instance.enemyObjects.All(e1 => e1 == null))
                 {
+                    TutorialManager.Instance.PlayNextSequence();
+                    gameplayFSMManager.PopState();
                     gameplayFSMManager.PushState(gameplayFSMManager.washingState);
                     GameManager.Instance.disableFightingTools();
                 }
@@ -59,17 +63,18 @@ public class StateTransition : IGameplayState
                 {
                     //this mean he clean all the teeth
                     gameplayFSMManager.ChangeToFighting();
+                    gameplayFSMManager.PopState();
                     gameplayFSMManager.PushState(gameplayFSMManager.fightingState);
                 }
                 break;
             case StateTransitionDirection.PauseToWashing:
                 //if the player click the resume menu and back to game again but he/she was in the washing state
                 TutorialManager.Instance.PlayNextSequence();
+                gameplayFSMManager.PopState();
                 gameplayFSMManager.PushState(gameplayFSMManager.washingState);
                 break;
             case StateTransitionDirection.FightingToPause:
                 //if the player click the pause menu and he/she in the fighting state
-                GameManager.Instance.disableFightingTools();
                 GameManager.Instance.enemySpawingPointManager.SetActive(false);
                 break;
             case StateTransitionDirection.PauseToFighting:
