@@ -9,7 +9,7 @@ public class VideoManager : MonoBehaviour
     [SerializeField]
     private VideoPlayer videoPlayer;
     public UnityEvent onVideoEnd;
-
+    
     private void Start()
     {
         videoPlayer.loopPointReached += EndVideo;
@@ -19,6 +19,7 @@ public class VideoManager : MonoBehaviour
     {
         if (!videoPlayer.isPlaying)
         {
+
             onVideoEnd.Invoke();
             
         }
