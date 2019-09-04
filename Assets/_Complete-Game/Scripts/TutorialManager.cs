@@ -28,7 +28,7 @@ public class TutorialManager : MonoBehaviour
 
     //[HideInInspector]
     public List<TutorialEntity> tutorialEntities = new List<TutorialEntity>();
-    private Queue<TutorialEntity> EntitiesQueue = new Queue<TutorialEntity>();
+    public Queue<TutorialEntity> EntitiesQueue = new Queue<TutorialEntity>();
     private Dictionary<TutorialEvent, TutorialEntity> tutorialMap = new Dictionary<TutorialEvent, TutorialEntity>();
     public AnimationFSM avatarAnimationFSM;
     public TextTypingAnimation textTypingAnimator;

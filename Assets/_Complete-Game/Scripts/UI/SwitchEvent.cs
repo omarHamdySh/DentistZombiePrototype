@@ -35,6 +35,7 @@ public class SwitchEvent : MonoBehaviour
 
     public void StartGame()
     {
-        GameManager.Instance.gameplayFSMManager.ChangeToWashing();
+        //GameManager.Instance.gameplayFSMManager.ChangeToWashing();
+        TutorialManager.Instance.PlayNextSequence();
     }
 }
