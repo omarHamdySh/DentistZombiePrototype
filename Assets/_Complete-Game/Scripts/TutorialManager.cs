@@ -3,9 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum TutorialEvent
 {
-
-
+    IntroVideo,
+    CleaningStarted,
+    CheeringBeautiful,
+    CheeringAmazing,
+    CheeringPerfact,
+    SheildActivation,
+    AttackStarted,
+    Attention,
+    WhileShooting,
+    WhenInjured,
+    SheildDistraction,
+    TeethDecayBreakfast,
+    TeethDecayLunch,
+    TeethDecayDinner,
+    GameEnded,
+    SweetDreams
 }
+
 public class TutorialManager : MonoBehaviour
 {
 
