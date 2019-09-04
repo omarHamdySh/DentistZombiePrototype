@@ -158,15 +158,15 @@ public class ToothDecayManager : MonoBehaviour
 
     private void CleaningTooth()
     {
-        foreach (var item in GameManager.Instance.DirtyTeeth)
-        {
-            if (item != this.gameObject)
-            {
-                var rend = item.GetComponent<Renderer>();
-                rend.material = toothMaterials[0];
-                GameManager.Instance.DirtyTeeth.Remove(item);
-            }
-        }
+        //foreach (var item in GameManager.Instance.DirtyTeeth)
+        //{
+        //    if (item != this.gameObject)
+        //    {
+        //        var rend = item.GetComponent<Renderer>();
+        //        rend.material = toothMaterials[0];
+        //        GameManager.Instance.DirtyTeeth.Remove(item);
+        //    }
+        //}
         thisToothRenderer.material = toothMaterials[0];
         GameManager.Instance.DirtyTeeth.Remove(this.gameObject);
     }

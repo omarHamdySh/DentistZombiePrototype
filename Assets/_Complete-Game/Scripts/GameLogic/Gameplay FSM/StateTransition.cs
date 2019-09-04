@@ -64,6 +64,7 @@ public class StateTransition : IGameplayState
                 break;
             case StateTransitionDirection.PauseToWashing:
                 //if the player click the resume menu and back to game again but he/she was in the washing state
+                TutorialManager.Instance.PlayNextSequence();
                 gameplayFSMManager.PushState(gameplayFSMManager.washingState);
                 break;
             case StateTransitionDirection.FightingToPause:
