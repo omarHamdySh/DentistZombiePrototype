@@ -48933,6 +48933,7 @@ MonoBehaviour:
   tutorialStateEntities:
   - {fileID: 563693215}
   - {fileID: 1734452261}
+  - {fileID: 1967157770}
   avatarAnimationFSM: {fileID: 3333537724115506838}
   textTypingAnimator: {fileID: 1158940882}
 --- !u!4 &1158940884
@@ -78991,7 +78992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499b79b79204cdd42a4b12f43e39a6cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialEvent: 11
+  tutorialEvent: 13
   animationClip: 3
   audioSource: {fileID: 1750075323}
   messageHeader: 
@@ -81011,6 +81012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseButtonText: {fileID: 84388663}
+  video: {fileID: 563693214}
 --- !u!65 &1890934966
 BoxCollider:
   m_ObjectHideFlags: 0
