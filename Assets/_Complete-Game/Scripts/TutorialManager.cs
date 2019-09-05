@@ -13,7 +13,7 @@ public enum TutorialEvent
     Attention,
     WhileShooting,
     WhenInjured,
-    SheildDistraction,
+    SheildDestraction,
     TeethDecayBreakfast,
     TeethDecayLunch,
     TeethDecayDinner,
@@ -27,7 +27,7 @@ public class TutorialManager : MonoBehaviour
     public static TutorialManager _Instance;
 
     //[HideInInspector]
-    public List<TutorialEntity> tutorialEntities = new List<TutorialEntity>();
+    public List<TutorialEntity> tutorialStateEntities = new List<TutorialEntity>();
     public Queue<TutorialEntity> EntitiesQueue = new Queue<TutorialEntity>();
     private Dictionary<TutorialEvent, TutorialEntity> tutorialMap = new Dictionary<TutorialEvent, TutorialEntity>();
     public AnimationFSM avatarAnimationFSM;
@@ -46,7 +46,17 @@ public class TutorialManager : MonoBehaviour
     }
     private void Start()
     {
-        foreach (var item in tutorialEntities)
+        foreach (Transform level in transform)
+        {
+            foreach (Transform tutroialEntity in level)
+            {
+                tutorialMap.Add(
+                    tutroialEntity.gameObject.GetComponent<TutorialEntity>().tutorialEvent,
+                    tutroialEntity.gameObject.GetComponent<TutorialEntity>());
+            }
+        }
+
+        foreach (var item in tutorialStateEntities)
         {
             EntitiesQueue.Enqueue(item.gameObject.GetComponent<TutorialEntity>());
         }
@@ -56,5 +66,8 @@ public class TutorialManager : MonoBehaviour
         EntitiesQueue.Dequeue().playSequence();
     }
 
+    public void playThisSequence(TutorialEvent tutorialEvent){
+        tutorialMap[tutorialEvent].playSequence();
+    }
 
 }

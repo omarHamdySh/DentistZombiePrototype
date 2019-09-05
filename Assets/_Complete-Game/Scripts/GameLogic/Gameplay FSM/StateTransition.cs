@@ -42,9 +42,10 @@ public class StateTransition : IGameplayState
                     //TutorialManager.Instance.PlayNextSequence();
                     //if (!source.isPlaying)
                     //{
-                        //this mean he clean all the teeth
-                        gameplayFSMManager.ChangeToFighting();
-                        gameplayFSMManager.PushState(gameplayFSMManager.fightingState);
+                    //this mean he clean all the teeth
+                    TutorialManager.Instance.PlayNextSequence();
+                    gameplayFSMManager.ChangeToFighting();
+                    gameplayFSMManager.PushState(gameplayFSMManager.fightingState);
                     //}
                 }
                 break;
