@@ -1,6 +1,4 @@
-﻿namespace VRTK.Examples
-{
-    using UnityEngine;
+﻿    using UnityEngine;
 
     public class RC_Car : MonoBehaviour
     {
@@ -114,4 +112,3 @@
             isJumping = true;
         }
     }
-}

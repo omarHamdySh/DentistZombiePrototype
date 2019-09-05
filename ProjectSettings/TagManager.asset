@@ -11,6 +11,9 @@ TagManager:
   - Test
   - Teeth
   - HiddenLaser
+  - ExcludeTeleport
+  - TeleportIgnore
+  - tube
   layers:
   - Default
   - TransparentFX

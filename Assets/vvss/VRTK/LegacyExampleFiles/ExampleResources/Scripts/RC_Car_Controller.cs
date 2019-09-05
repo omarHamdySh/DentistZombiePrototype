@@ -1,47 +1,45 @@
-﻿namespace VRTK.Examples
+﻿
+using UnityEngine;
+using VRTK;
+public class RC_Car_Controller : MonoBehaviour
 {
-    using UnityEngine;
+    public GameObject rcCar;
+    private RC_Car rcCarScript;
 
-    public class RC_Car_Controller : MonoBehaviour
+    private void Start()
     {
-        public GameObject rcCar;
-        private RC_Car rcCarScript;
+        rcCarScript = rcCar.GetComponent<RC_Car>();
+        GetComponent<VRTK_ControllerEvents>().TriggerAxisChanged += new ControllerInteractionEventHandler(DoTriggerAxisChanged);
+        GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged += new ControllerInteractionEventHandler(DoTouchpadAxisChanged);
 
-        private void Start()
-        {
-            rcCarScript = rcCar.GetComponent<RC_Car>();
-            GetComponent<VRTK_ControllerEvents>().TriggerAxisChanged += new ControllerInteractionEventHandler(DoTriggerAxisChanged);
-            GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged += new ControllerInteractionEventHandler(DoTouchpadAxisChanged);
+        GetComponent<VRTK_ControllerEvents>().TriggerReleased += new ControllerInteractionEventHandler(DoTriggerReleased);
+        GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd += new ControllerInteractionEventHandler(DoTouchpadTouchEnd);
 
-            GetComponent<VRTK_ControllerEvents>().TriggerReleased += new ControllerInteractionEventHandler(DoTriggerReleased);
-            GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd += new ControllerInteractionEventHandler(DoTouchpadTouchEnd);
+        GetComponent<VRTK_ControllerEvents>().ButtonTwoPressed += new ControllerInteractionEventHandler(DoCarReset);
+    }
 
-            GetComponent<VRTK_ControllerEvents>().ButtonTwoPressed += new ControllerInteractionEventHandler(DoCarReset);
-        }
+    private void DoTouchpadAxisChanged(object sender, ControllerInteractionEventArgs e)
+    {
+        rcCarScript.SetTouchAxis(e.touchpadAxis);
+    }
 
-        private void DoTouchpadAxisChanged(object sender, ControllerInteractionEventArgs e)
-        {
-            rcCarScript.SetTouchAxis(e.touchpadAxis);
-        }
+    private void DoTriggerAxisChanged(object sender, ControllerInteractionEventArgs e)
+    {
+        rcCarScript.SetTriggerAxis(e.buttonPressure);
+    }
 
-        private void DoTriggerAxisChanged(object sender, ControllerInteractionEventArgs e)
-        {
-            rcCarScript.SetTriggerAxis(e.buttonPressure);
-        }
+    private void DoTouchpadTouchEnd(object sender, ControllerInteractionEventArgs e)
+    {
+        rcCarScript.SetTouchAxis(Vector2.zero);
+    }
 
-        private void DoTouchpadTouchEnd(object sender, ControllerInteractionEventArgs e)
-        {
-            rcCarScript.SetTouchAxis(Vector2.zero);
-        }
+    private void DoTriggerReleased(object sender, ControllerInteractionEventArgs e)
+    {
+        rcCarScript.SetTriggerAxis(0f);
+    }
 
-        private void DoTriggerReleased(object sender, ControllerInteractionEventArgs e)
-        {
-            rcCarScript.SetTriggerAxis(0f);
-        }
-
-        private void DoCarReset(object sender, ControllerInteractionEventArgs e)
-        {
-            rcCarScript.ResetCar();
-        }
+    private void DoCarReset(object sender, ControllerInteractionEventArgs e)
+    {
+        rcCarScript.ResetCar();
     }
 }

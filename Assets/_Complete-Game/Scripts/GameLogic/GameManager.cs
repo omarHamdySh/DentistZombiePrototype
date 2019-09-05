@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.AI;
 using CompleteProject;
-
+using VRTK.Examples;
 public enum GameLevel
 {
     level0,
@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI currentLevelInfoLabel;
     public TextMeshProUGUI speedEnemyInfoLabel;
 
+    public VRTK.Examples.RC_Car_Controller rC_Controller;
     public ParticleSystem toothEffect;
     public GameObject toothPasteGameObjct;
 
@@ -69,6 +70,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+
         currentLevel = GameLevel.level0;
     }
 
@@ -92,6 +94,7 @@ public class GameManager : MonoBehaviour
     }
     public void enableWashingTools()
     {
+        rC_Controller.enabled = true;
         foreach (var item in washingTools)
         {
             item.gameObject.SetActive(true);
@@ -99,6 +102,7 @@ public class GameManager : MonoBehaviour
     }
     public void disableWashingTools()
     {
+        rC_Controller.enabled = false;
         foreach (var item in washingTools)
         {
             item.gameObject.SetActive(false);
