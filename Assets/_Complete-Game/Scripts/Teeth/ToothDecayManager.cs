@@ -73,7 +73,8 @@ public class ToothDecayManager : MonoBehaviour
 
             thisToothRenderer.material = toothMaterials[nextMatIndex];
             GameManager.Instance.DirtyTeeth.Add(this.gameObject);
-            Destroy(collision.gameObject);                          //Destroy the enemy game object that has collided with the tooth.
+            collision.gameObject.GetComponent<CompleteProject.EnemyHealth>()
+                .killTheEnemy();                       //Destroy the enemy game object that has collided with the tooth.
             TeethHited++;
             GameManager.Instance.maximumEnemyHits++;
         }

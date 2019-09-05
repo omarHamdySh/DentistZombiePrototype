@@ -318,7 +318,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -371,7 +371,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4694,7 +4694,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 01ffe1f3679a0894087ea5e74106fb93, type: 2}
+  - {fileID: 2100000, guid: e7752f736e4f2014cb70af5da5d7a8fc, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4981,6 +4981,7 @@ GameObject:
   - component: {fileID: 9051796433940856942}
   - component: {fileID: 5872226719652498852}
   - component: {fileID: 6874347046966300549}
+  - component: {fileID: 2493471949679043632}
   m_Layer: 9
   m_Name: Needle_virus_Red
   m_TagString: Enemy
@@ -5017,7 +5018,7 @@ Animator:
   m_GameObject: {fileID: 1648942985568920592}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 3d3a968a7c7bb414cb1b63891a83c938, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64184c8222327104189ec281e9fdff66, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5202,7 +5203,7 @@ MonoBehaviour:
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 50
-  deathClip: {fileID: 8300000, guid: 8c615fd0429f34edf85539d70279360d, type: 3}
+  deathClip: {fileID: 8300000, guid: 3c361808c254c37439c478147042435c, type: 3}
 --- !u!114 &5872226719652498852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5233,6 +5234,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 2
+--- !u!114 &2493471949679043632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648942985568920592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d11534059206c04ab7e38c525991e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAnimationState: 0
+  animator: {fileID: 1405455471645564298}
 --- !u!1 &1738216333611342264
 GameObject:
   m_ObjectHideFlags: 0

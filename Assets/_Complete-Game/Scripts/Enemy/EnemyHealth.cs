@@ -10,11 +10,12 @@ namespace CompleteProject
         public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
         public AudioClip deathClip;                 // The sound to play when the enemy dies.
 
-
+       EnemyAnimationFSM enemyAnimation;
         Animator anim;                              // Reference to the animator.
         AudioSource enemyAudio;                     // Reference to the audio source.
         ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
         CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
+        UnityEngine.AI.NavMeshAgent navMeshAgent;
         bool isDead;                                // Whether the enemy is dead.
         bool isSinking;                             // Whether the enemy has started sinking through the floor.
 
@@ -22,6 +23,7 @@ namespace CompleteProject
         void Awake()
         {
             // Setting up the references.
+            enemyAnimation = GetComponent<EnemyAnimationFSM>();
             anim = GetComponent<Animator>();
             enemyAudio = GetComponent<AudioSource>();
             hitParticles = GetComponentInChildren<ParticleSystem>();
@@ -40,6 +42,8 @@ namespace CompleteProject
                 // ... move the enemy down by the sinkSpeed per second.
                 transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
             }
+
+
         }
 
 
@@ -67,13 +71,18 @@ namespace CompleteProject
                 //Death();
                 GameManager.Instance.enemykilledScore++;
                 GameManager.Instance.playerScoreManager.UpdateScoreText();
-
-                Destroy(this.gameObject);
-                //GameManager.Instance.ScoreToWash++;
+                killTheEnemy();
+                //Will have to add event to add the script to destory the game object of the enemy after the death animation finishes
             }
         }
 
-
+        public void killTheEnemy()
+        {
+            // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
+            enemyAudio.clip = deathClip;
+            enemyAudio.Play();
+            enemyAnimation.activateThisAnimationStateState(EnemyAnimationState.Death);
+        }
         void Death()
         {
             // The enemy is dead.

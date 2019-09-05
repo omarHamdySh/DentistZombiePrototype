@@ -459,7 +459,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -512,7 +512,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4835,7 +4835,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 01ffe1f3679a0894087ea5e74106fb93, type: 2}
+  - {fileID: 2100000, guid: b9f7f82842e4a214cb2c73dadaec69e5, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -5140,6 +5140,7 @@ GameObject:
   - component: {fileID: 4705762790786305069}
   - component: {fileID: 3068081446011666659}
   - component: {fileID: 7769313526259690702}
+  - component: {fileID: 3458913302123589309}
   m_Layer: 9
   m_Name: Needle_virus_Yallow
   m_TagString: Enemy
@@ -5176,7 +5177,7 @@ Animator:
   m_GameObject: {fileID: 6335043623759768376}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 3d3a968a7c7bb414cb1b63891a83c938, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64184c8222327104189ec281e9fdff66, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5392,6 +5393,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 2
+--- !u!114 &3458913302123589309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335043623759768376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d11534059206c04ab7e38c525991e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAnimationState: 0
+  animator: {fileID: 3698067999657788473}
 --- !u!1 &6457809546374270790
 GameObject:
   m_ObjectHideFlags: 0

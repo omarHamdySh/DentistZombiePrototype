@@ -60,14 +60,19 @@ public class TutorialManager : MonoBehaviour
         {
             EntitiesQueue.Enqueue(item.gameObject.GetComponent<TutorialEntity>());
         }
+
     }
 
     public void PlayNextSequence() {
+
         EntitiesQueue.Dequeue().playSequence();
+
     }
 
     public void playThisSequence(TutorialEvent tutorialEvent){
+
         tutorialMap[tutorialEvent].playSequence();
+
     }
 
 }
