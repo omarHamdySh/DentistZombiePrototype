@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 6476793637324826502}
   - component: {fileID: 7237054401774043450}
   - component: {fileID: 5569529082562876041}
+  - component: {fileID: 5523589197736822438}
   m_Layer: 9
   m_Name: Needle_virus_Green
   m_TagString: Enemy
@@ -84,7 +85,7 @@ Animator:
   m_GameObject: {fileID: 2316535581042517299}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 3d3a968a7c7bb414cb1b63891a83c938, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 64184c8222327104189ec281e9fdff66, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -269,7 +270,7 @@ MonoBehaviour:
   currentHealth: 0
   sinkSpeed: 2.5
   scoreValue: 50
-  deathClip: {fileID: 8300000, guid: 8c615fd0429f34edf85539d70279360d, type: 3}
+  deathClip: {fileID: 8300000, guid: 3c361808c254c37439c478147042435c, type: 3}
 --- !u!114 &7237054401774043450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +301,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 2
+--- !u!114 &5523589197736822438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316535581042517299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d11534059206c04ab7e38c525991e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAnimationState: 0
+  animator: {fileID: 6509500176778197928}
 --- !u!1 &2784891451970121279
 GameObject:
   m_ObjectHideFlags: 0
@@ -5729,7 +5744,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -5782,7 +5797,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -10105,7 +10120,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 01ffe1f3679a0894087ea5e74106fb93, type: 2}
+  - {fileID: 2100000, guid: 2afacfbfd48d8a74cbb8044d78cc0e17, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

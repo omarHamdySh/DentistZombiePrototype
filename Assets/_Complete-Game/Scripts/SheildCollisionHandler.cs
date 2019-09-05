@@ -27,7 +27,10 @@ public class SheildCollisionHandler : MonoBehaviour
                 sheildHitsCounter = 0;
                 ToothDecayManager.isSheildActivated = false;
                 this.gameObject.SetActive(false);
+
                 TutorialManager.Instance.playThisSequence(TutorialEvent.SheildDestraction);
+                //Kill the enemy here 
+                collision.gameObject.GetComponent<CompleteProject.EnemyHealth>().killTheEnemy();
             }
         }
     }
