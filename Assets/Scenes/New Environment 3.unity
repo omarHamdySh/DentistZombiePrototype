@@ -66480,7 +66480,7 @@ MonoBehaviour:
   enemykilledScore: 0
   currentLevelInfoLabel: {fileID: 60312801}
   speedEnemyInfoLabel: {fileID: 748880918}
-  toothPasteGameObjct: {fileID: 0}
+  toothPasteGameObjct: {fileID: 4275255436902868849}
   OnWashingFinish: {fileID: 11400000, guid: 43677965d99bd7c45a23329b6c0c00bc, type: 2}
   OnSheildActivation: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
   OnSheildDeactivation: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71,
@@ -90530,7 +90530,7 @@ MonoBehaviour:
   onVideoEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1379454818}
         m_MethodName: ChangeToWashing
         m_Mode: 1
         m_Arguments:
@@ -90552,7 +90552,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 89716158}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -93878,7 +93878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseButtonText: {fileID: 84388663}
-  video: {fileID: 563693214}
+  video: {fileID: 1702528245}
   isIntro: 0
 --- !u!65 &1890934966
 BoxCollider:
@@ -101611,7 +101611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -101730,7 +101730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -101883,7 +101883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -101956,7 +101956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -102075,7 +102075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -102176,7 +102176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -102229,7 +102229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -102282,7 +102282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -102335,7 +102335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -102388,7 +102388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -103225,7 +103225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -103338,7 +103338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -103445,7 +103445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -103558,7 +103558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -103677,7 +103677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -103766,7 +103766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
+  toothEffect: {fileID: 1098650500}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}

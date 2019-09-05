@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI currentLevelInfoLabel;
     public TextMeshProUGUI speedEnemyInfoLabel;
 
+    public ParticleSystem toothEffect;
     public GameObject toothPasteGameObjct;
 
     public GameEvent OnWashingFinish;

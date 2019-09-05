@@ -473,7 +473,7 @@ RectTransform:
   - {fileID: 116755348}
   - {fileID: 827066607}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1452,11 +1452,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89716158}
   m_LocalRotation: {x: 0.49438256, y: -0.5208208, z: 0.47943148, w: 0.50445724}
-  m_LocalPosition: {x: 2.39, y: 12.68, z: -16.94}
-  m_LocalScale: {x: 0.60285, y: 0.60285, z: 0.60285}
+  m_LocalPosition: {x: 2.5528, y: 9.9018, z: -20.93}
+  m_LocalScale: {x: 0.28273407, y: 0.28273407, z: 0.18933003}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 86.548004, y: -121.36001, z: -31.279001}
 --- !u!1 &92817527
 GameObject:
@@ -2817,11 +2817,6 @@ GameObject:
   - component: {fileID: 210450146}
   - component: {fileID: 210450145}
   - component: {fileID: 210450144}
-  - component: {fileID: 210450143}
-  - component: {fileID: 210450142}
-  - component: {fileID: 210450141}
-  - component: {fileID: 210450140}
-  - component: {fileID: 210450139}
   m_Layer: 13
   m_Name: Teeth_13
   m_TagString: Untagged
@@ -2843,117 +2838,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &210450139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210450137}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &210450140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210450137}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &210450141
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210450137}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300038, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &210450142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210450137}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &210450143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210450137}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &210450144
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9099,7 +8983,7 @@ Transform:
   m_Children:
   - {fileID: 1803886590}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &304381552
 MonoBehaviour:
@@ -23794,11 +23678,6 @@ GameObject:
   - component: {fileID: 402395525}
   - component: {fileID: 402395524}
   - component: {fileID: 402395523}
-  - component: {fileID: 402395522}
-  - component: {fileID: 402395521}
-  - component: {fileID: 402395520}
-  - component: {fileID: 402395519}
-  - component: {fileID: 402395518}
   m_Layer: 13
   m_Name: Teeth_05
   m_TagString: Untagged
@@ -23820,117 +23699,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &402395518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402395516}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &402395519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402395516}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &402395520
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402395516}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300030, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &402395521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402395516}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &402395522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402395516}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &402395523
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -29148,7 +28916,7 @@ Transform:
   - {fileID: 1473597693}
   - {fileID: 491329683}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &464121957
 GameObject:
@@ -34813,7 +34581,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &558388205
 GameObject:
@@ -35169,7 +34937,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &589346284
 GameObject:
@@ -35183,11 +34951,6 @@ GameObject:
   - component: {fileID: 589346293}
   - component: {fileID: 589346292}
   - component: {fileID: 589346291}
-  - component: {fileID: 589346290}
-  - component: {fileID: 589346289}
-  - component: {fileID: 589346288}
-  - component: {fileID: 589346287}
-  - component: {fileID: 589346286}
   m_Layer: 13
   m_Name: Teeth_06
   m_TagString: Untagged
@@ -35209,117 +34972,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &589346286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589346284}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &589346287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589346284}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &589346288
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589346284}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300026, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &589346289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589346284}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &589346290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 589346284}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &589346291
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -35465,6 +35117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 593874622}
+  - component: {fileID: 593874623}
   m_Layer: 0
   m_Name: BrushPosition
   m_TagString: Untagged
@@ -35487,6 +35140,19 @@ Transform:
   m_Father: {fileID: 1473597693}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &593874623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593874621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf628253b1fcf14c869c45c997010aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RightcontrollerEvents: {fileID: 1473597694}
 --- !u!1 &593879492
 GameObject:
   m_ObjectHideFlags: 0
@@ -35663,7 +35329,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0.989, y: -88.16701, z: -2.493}
 --- !u!1 &641038563
 GameObject:
@@ -45122,7 +44788,7 @@ Transform:
   - {fileID: 1888876127}
   - {fileID: 1164592078}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &774667947
 Transform:
@@ -46668,11 +46334,6 @@ GameObject:
   - component: {fileID: 823022628}
   - component: {fileID: 823022627}
   - component: {fileID: 823022626}
-  - component: {fileID: 823022625}
-  - component: {fileID: 823022624}
-  - component: {fileID: 823022623}
-  - component: {fileID: 823022622}
-  - component: {fileID: 823022621}
   m_Layer: 13
   m_Name: Teeth_07
   m_TagString: Untagged
@@ -46694,117 +46355,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &823022621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823022619}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &823022622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823022619}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &823022623
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823022619}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300028, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &823022624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823022619}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &823022625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 823022619}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &823022626
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -47104,11 +46654,6 @@ GameObject:
   - component: {fileID: 844324230}
   - component: {fileID: 844324229}
   - component: {fileID: 844324228}
-  - component: {fileID: 844324227}
-  - component: {fileID: 844324226}
-  - component: {fileID: 844324225}
-  - component: {fileID: 844324224}
-  - component: {fileID: 844324223}
   m_Layer: 13
   m_Name: Teeth_28
   m_TagString: Untagged
@@ -47130,117 +46675,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &844324223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844324221}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &844324224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844324221}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &844324225
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844324221}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300044, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &844324226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844324221}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &844324227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844324221}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &844324228
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -48393,7 +47827,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &893593051
 MonoBehaviour:
@@ -48543,7 +47977,7 @@ PrefabInstance:
     - target: {fileID: 5758222585463884391, guid: 2013166ff69c959468e2d38e9f4ca487,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5758222585463884391, guid: 2013166ff69c959468e2d38e9f4ca487,
         type: 3}
@@ -49556,7 +48990,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300000, guid: 5b84db49d40ea449aa4f3e3bd229ab5b,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 60c6911af42b3174ba16ed6d578cbdec, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e74cb97e7be0fbf44862c79b2658f82e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -49654,7 +49088,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015277942
 GameObject:
@@ -49905,11 +49339,6 @@ GameObject:
   - component: {fileID: 1037968703}
   - component: {fileID: 1037968702}
   - component: {fileID: 1037968701}
-  - component: {fileID: 1037968700}
-  - component: {fileID: 1037968699}
-  - component: {fileID: 1037968698}
-  - component: {fileID: 1037968697}
-  - component: {fileID: 1037968696}
   m_Layer: 13
   m_Name: Teeth_04
   m_TagString: Untagged
@@ -49931,117 +49360,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1037968696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037968694}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1037968697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037968694}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1037968698
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037968694}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300014, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1037968699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037968694}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &1037968700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037968694}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &1037968701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -50393,7 +49711,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1069788584
 GameObject:
@@ -51071,7 +50389,7 @@ RectTransform:
   m_Children:
   - {fileID: 52080642}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -51235,11 +50553,6 @@ GameObject:
   - component: {fileID: 1133063491}
   - component: {fileID: 1133063490}
   - component: {fileID: 1133063489}
-  - component: {fileID: 1133063488}
-  - component: {fileID: 1133063487}
-  - component: {fileID: 1133063486}
-  - component: {fileID: 1133063485}
-  - component: {fileID: 1133063484}
   m_Layer: 13
   m_Name: Teeth_11
   m_TagString: Untagged
@@ -51261,117 +50574,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1133063484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133063482}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1133063485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133063482}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1133063486
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133063482}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300034, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1133063487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133063482}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &1133063488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133063482}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &1133063489
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -51727,7 +50929,7 @@ Transform:
   m_Children:
   - {fileID: 481257957}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1159661806
 GameObject:
@@ -52194,7 +51396,7 @@ Transform:
   - {fileID: 973298218}
   - {fileID: 1783818224}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1185034947
 GameObject:
@@ -57604,7 +56806,7 @@ Transform:
   - {fileID: 272755460}
   - {fileID: 1766116328}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281876249
 GameObject:
@@ -57768,11 +56970,6 @@ GameObject:
   - component: {fileID: 1290206243}
   - component: {fileID: 1290206242}
   - component: {fileID: 1290206241}
-  - component: {fileID: 1290206240}
-  - component: {fileID: 1290206239}
-  - component: {fileID: 1290206238}
-  - component: {fileID: 1290206237}
-  - component: {fileID: 1290206236}
   m_Layer: 13
   m_Name: Teeth_10
   m_TagString: Untagged
@@ -57794,117 +56991,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1290206236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290206234}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1290206237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290206234}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1290206238
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290206234}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300032, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1290206239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290206234}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &1290206240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1290206234}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &1290206241
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -59149,6 +58235,7 @@ MonoBehaviour:
   enemykilledScore: 0
   currentLevelInfoLabel: {fileID: 60312801}
   speedEnemyInfoLabel: {fileID: 748880918}
+  toothEffect: {fileID: 0}
   toothPasteGameObjct: {fileID: 4275255436902868849}
   OnWashingFinish: {fileID: 11400000, guid: 43677965d99bd7c45a23329b6c0c00bc, type: 2}
   OnSheildActivation: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
@@ -59166,7 +58253,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1379454821
 MonoBehaviour:
@@ -59287,7 +58374,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 43.126003, y: 40.296, z: 88.129005}
 --- !u!1 &1416753337
 GameObject:
@@ -59761,7 +58848,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1462317111}
-  - component: {fileID: 1462317110}
   m_Layer: 0
   m_Name: TeethComponent 2
   m_TagString: Untagged
@@ -59769,46 +58855,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1462317110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1462317109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 43677965d99bd7c45a23329b6c0c00bc, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1344153409}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 139847951}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1462317111
 Transform:
   m_ObjectHideFlags: 0
@@ -59816,7 +58862,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462317109}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.802456, y: 4.73, z: 20.26}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -59826,8 +58872,8 @@ Transform:
   - {fileID: 846466222}
   - {fileID: 1344153416}
   - {fileID: 139847958}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 8152187686297193732}
+  m_RootOrder: 277
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1469080862
 GameObject:
@@ -71688,7 +70734,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1653483403
 GameObject:
@@ -76644,7 +75690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4446873224128080, guid: c4fdbf68895683147b81d389316ba4fd, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4446873224128080, guid: c4fdbf68895683147b81d389316ba4fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -81888,11 +80934,6 @@ GameObject:
   - component: {fileID: 1703545558}
   - component: {fileID: 1703545557}
   - component: {fileID: 1703545556}
-  - component: {fileID: 1703545555}
-  - component: {fileID: 1703545554}
-  - component: {fileID: 1703545553}
-  - component: {fileID: 1703545552}
-  - component: {fileID: 1703545551}
   m_Layer: 13
   m_Name: Teeth_25
   m_TagString: Untagged
@@ -81914,117 +80955,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1703545551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703545549}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1703545552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703545549}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1703545553
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703545549}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300020, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1703545554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703545549}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &1703545555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703545549}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &1703545556
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -82096,11 +81026,6 @@ GameObject:
   - component: {fileID: 1710960196}
   - component: {fileID: 1710960195}
   - component: {fileID: 1710960194}
-  - component: {fileID: 1710960193}
-  - component: {fileID: 1710960192}
-  - component: {fileID: 1710960191}
-  - component: {fileID: 1710960190}
-  - component: {fileID: 1710960189}
   m_Layer: 13
   m_Name: Teeth_23
   m_TagString: Untagged
@@ -82122,117 +81047,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1710960189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710960187}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1710960190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710960187}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1710960191
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710960187}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300024, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1710960192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710960187}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &1710960193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1710960187}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &1710960194
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -82374,7 +81188,7 @@ PrefabInstance:
     - target: {fileID: 1164023323379090491, guid: ac6734a675725d14d8bf0bbd169104e2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1164023323379090491, guid: ac6734a675725d14d8bf0bbd169104e2,
         type: 3}
@@ -82622,11 +81436,6 @@ GameObject:
   - component: {fileID: 1744159468}
   - component: {fileID: 1744159467}
   - component: {fileID: 1744159466}
-  - component: {fileID: 1744159465}
-  - component: {fileID: 1744159464}
-  - component: {fileID: 1744159463}
-  - component: {fileID: 1744159462}
-  - component: {fileID: 1744159461}
   m_Layer: 13
   m_Name: Teeth_27
   m_TagString: Untagged
@@ -82648,117 +81457,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1744159461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744159459}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1744159462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744159459}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1744159463
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744159459}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300016, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1744159464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744159459}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &1744159465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744159459}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &1744159466
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -83747,11 +82445,6 @@ GameObject:
   - component: {fileID: 1805788273}
   - component: {fileID: 1805788272}
   - component: {fileID: 1805788271}
-  - component: {fileID: 1805788270}
-  - component: {fileID: 1805788269}
-  - component: {fileID: 1805788268}
-  - component: {fileID: 1805788267}
-  - component: {fileID: 1805788266}
   m_Layer: 13
   m_Name: Teeth_08
   m_TagString: Untagged
@@ -83773,117 +82466,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1805788266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805788264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1805788267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805788264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1805788268
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805788264}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300022, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1805788269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805788264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &1805788270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805788264}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &1805788271
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -84772,11 +83354,6 @@ GameObject:
   - component: {fileID: 1856875400}
   - component: {fileID: 1856875399}
   - component: {fileID: 1856875398}
-  - component: {fileID: 1856875393}
-  - component: {fileID: 1856875397}
-  - component: {fileID: 1856875396}
-  - component: {fileID: 1856875395}
-  - component: {fileID: 1856875394}
   m_Layer: 13
   m_Name: Teeth_12
   m_TagString: Untagged
@@ -84784,117 +83361,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1856875393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856875392}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
---- !u!114 &1856875394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856875392}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1856875395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856875392}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1856875396
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856875392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300036, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1856875397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856875392}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!64 &1856875398
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -85579,6 +84045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseButtonText: {fileID: 84388663}
   video: {fileID: 563693214}
+  isIntro: 0
 --- !u!65 &1890934966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86149,7 +84616,7 @@ Transform:
   - {fileID: 875629678}
   - {fileID: 1831634438}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916658058
 GameObject:
@@ -86229,7 +84696,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1926588891
 GameObject:
@@ -86460,11 +84927,6 @@ GameObject:
   - component: {fileID: 1958723121}
   - component: {fileID: 1958723120}
   - component: {fileID: 1958723119}
-  - component: {fileID: 1958723118}
-  - component: {fileID: 1958723117}
-  - component: {fileID: 1958723116}
-  - component: {fileID: 1958723115}
-  - component: {fileID: 1958723114}
   m_Layer: 13
   m_Name: Teeth_20
   m_TagString: Untagged
@@ -86486,117 +84948,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1958723114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958723112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1958723115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958723112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1958723116
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958723112}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300042, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1958723117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958723112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &1958723118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1958723112}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &1958723119
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -87010,11 +85361,6 @@ GameObject:
   - component: {fileID: 1974319597}
   - component: {fileID: 1974319596}
   - component: {fileID: 1974319595}
-  - component: {fileID: 1974319594}
-  - component: {fileID: 1974319593}
-  - component: {fileID: 1974319592}
-  - component: {fileID: 1974319591}
-  - component: {fileID: 1974319590}
   m_Layer: 13
   m_Name: Teeth_24
   m_TagString: Untagged
@@ -87036,117 +85382,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1974319590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974319588}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &1974319591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974319588}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &1974319592
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974319588}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300040, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &1974319593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974319588}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &1974319594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974319588}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &1974319595
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -87778,11 +86013,6 @@ GameObject:
   - component: {fileID: 2019143975}
   - component: {fileID: 2019143974}
   - component: {fileID: 2019143973}
-  - component: {fileID: 2019143972}
-  - component: {fileID: 2019143971}
-  - component: {fileID: 2019143970}
-  - component: {fileID: 2019143969}
-  - component: {fileID: 2019143968}
   m_Layer: 13
   m_Name: Teeth_09
   m_TagString: Untagged
@@ -87804,117 +86034,6 @@ Transform:
   m_Father: {fileID: 1375451926}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2019143968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019143966}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: c4b90754870b0234693bc74295a18e71, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildDeactivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!114 &2019143969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019143966}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b24362b6e6aa4479051615ccb10427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9231c8bc3e17ad34a9b34570c67d0f75, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1856875393}
-        m_MethodName: OnSheildActivation
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
---- !u!64 &2019143970
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019143966}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300018, guid: 2a9da723c11bd5a46a7d573cc4675d3b, type: 3}
---- !u!114 &2019143971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019143966}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32067ea884548644b13cf9baddd4573, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &2019143972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2019143966}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toothEffect: {fileID: 0}
-  toothIsBeingWashed: 0
-  toothMaterials:
-  - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
-  - {fileID: 2100000, guid: f9d93d378a2e8944590dbcc558a7c68c, type: 2}
-  - {fileID: 2100000, guid: 4d5c38d6b66c8a34f8bd734adf4fcf5b, type: 2}
-  - {fileID: 2100000, guid: f3e96793f4c75e24c9cca4b431af5127, type: 2}
-  - {fileID: 2100000, guid: ce3dcfd3fbc4ab949ac3e741735c171b, type: 2}
-  washingSpeed: 1
-  testingBrushes: 0
-  testText: {fileID: 0}
 --- !u!64 &2019143973
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -88760,7 +86879,7 @@ Transform:
   - {fileID: 234864230061227646}
   - {fileID: 234864228804158769}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &234864229403346943
 GameObject:
@@ -89898,13 +88017,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3333537724115506837}
   m_LocalRotation: {x: -0, y: -0.7572824, z: -0, w: 0.65308756}
-  m_LocalPosition: {x: 2.8691537, y: -2.8899999, z: -17.374363}
-  m_LocalScale: {x: 6.7561283, y: 6.7561283, z: 6.7561283}
+  m_LocalPosition: {x: 1.58, y: -0.055793, z: -21.241001}
+  m_LocalScale: {x: 4.836442, y: 4.836442, z: 4.836442}
   m_Children:
   - {fileID: 3333537724115405543}
   - {fileID: 3333537724115405495}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: -98.450005, z: 0}
 --- !u!4 &3333537724115405495
 Transform:
@@ -92981,7 +91100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -93100,7 +91218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -93253,7 +91370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -93326,7 +91442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -93445,7 +91560,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -93546,7 +91660,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -93599,7 +91712,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -93652,7 +91764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -93705,7 +91816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -93758,7 +91868,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -94595,7 +92704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -94708,7 +92816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -94815,7 +92922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -94928,7 +93034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -95047,7 +93152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -95136,7 +93240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25124652e8a48c245ad8d7537d75a753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toothEffect: {fileID: 5243695287538084865}
   toothIsBeingWashed: 0
   toothMaterials:
   - {fileID: 2100000, guid: e1ced812644d0e845a2876b5f7c909da, type: 2}
@@ -113369,8 +111472,9 @@ Transform:
   - {fileID: 8152187686297193260}
   - {fileID: 8152187686297193262}
   - {fileID: 723967777}
+  - {fileID: 1462317111}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &8152187686297193734
 Transform:

@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ToothDecayManager : MonoBehaviour
 {
-    public ParticleSystem toothEffect;
+    
     public static ToothDecayManager instance;
     Renderer thisToothRenderer;
     PlayerHealth playerHealth;
@@ -26,6 +26,7 @@ public class ToothDecayManager : MonoBehaviour
     //Variables for test and must be removed later on.
     public bool testingBrushes;
     public TextMeshProUGUI testText;
+    bool isHittedFlag = true;
     private void Start()
     {
         instance = GetComponent<ToothDecayManager>();
@@ -73,11 +74,17 @@ public class ToothDecayManager : MonoBehaviour
                 nextMatIndex = (toothMaterials.Count - 1);
 
             thisToothRenderer.material = toothMaterials[nextMatIndex];
-            GameManager.Instance.DirtyTeeth.Add(this.gameObject);
+            if (isHittedFlag)
+            {
+                GameManager.Instance.DirtyTeeth.Add(this.gameObject);
+                isHittedFlag = false;
+            }
+
             collision.gameObject.GetComponent<CompleteProject.EnemyHealth>()
                 .killTheEnemy();                       //Destroy the enemy game object that has collided with the tooth.
             TeethHited++;
             GameManager.Instance.maximumEnemyHits++;
+
         }
 
     }
@@ -137,7 +144,7 @@ public class ToothDecayManager : MonoBehaviour
         if (other.gameObject.tag == "ToothPaste")
         {
             GameManager.Instance.toothPasteGameObjct.GetComponent<MeshRenderer>().enabled = false;
-            toothEffect.Play();
+            GameManager.Instance.toothEffect.Play();
         }
     }
 
@@ -174,6 +181,7 @@ public class ToothDecayManager : MonoBehaviour
         //    }
         //}
         thisToothRenderer.material = toothMaterials[0];
+        isHittedFlag = true;
         GameManager.Instance.DirtyTeeth.Remove(this.gameObject);
     }
 
