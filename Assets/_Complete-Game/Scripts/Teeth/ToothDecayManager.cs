@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ToothDecayManager : MonoBehaviour
 {
+    public ParticleSystem toothEffect;
     public static ToothDecayManager instance;
     Renderer thisToothRenderer;
     PlayerHealth playerHealth;
@@ -132,7 +133,11 @@ public class ToothDecayManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        if (other.gameObject.tag == "ToothPaste")
+        {
+            GameManager.Instance.toothPasteGameObjct.GetComponent<MeshRenderer>().enabled = false;
+            toothEffect.Play();
+        }
     }
 
     private void OnTriggerStay(Collider other)

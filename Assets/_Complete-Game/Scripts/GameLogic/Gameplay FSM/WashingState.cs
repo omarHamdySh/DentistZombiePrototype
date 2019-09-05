@@ -15,6 +15,7 @@ public class WashingState : IGameplayState
 
     public void OnStateEnter()
     {
+        GameManager.Instance.toothPasteGameObjct.GetComponent<MeshRenderer>().enabled = true;
         GameManager.Instance.MoveToTheNextLevel();
         //Turn off the other states' controllers and turn on this state's controller 
         GameManager.Instance.enemySpawingPointManager.SetActive(false);
@@ -36,20 +37,20 @@ public class WashingState : IGameplayState
         ///     push the next state
         /// other logic related to exiting the this state also goes here
         /// </summary>
-        GameManager.Instance.disableWashingTools();
 
+        GameManager.Instance.disableWashingTools();
     }
 
     public void OnStateUpdate()
     {
         //Follow patroling path route.
-        if (GameManager.Instance.DirtyTeeth.Count<=0)
+        if (GameManager.Instance.DirtyTeeth.Count <= 0)
         {
             GameManager.Instance.declareWashingProcessEnd();
             //Activate the shield.
             //Change the state back again to fighting state.
         }
-        
+
     }
     string ToString()
     {
