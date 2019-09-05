@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public VRTK.Examples.RC_Car_Controller rC_Controller;
     public ParticleSystem toothEffect;
     public GameObject toothPasteGameObjct;
-
+    public GameObject backgroundSound;
     public GameEvent OnWashingFinish;
     public GameEvent OnSheildActivation;
     public GameEvent OnSheildDeactivation;
@@ -79,6 +79,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void enableFightingTools()
     {
+        backgroundSound.SetActive(true);
         foreach (var item in fightingTools)
         {
             item.gameObject.SetActive(true);
@@ -87,6 +88,7 @@ public class GameManager : MonoBehaviour
     }
     public void disableFightingTools()
     {
+        backgroundSound.SetActive(false);
         foreach (var item in fightingTools)
         {
             item.gameObject.SetActive(false);

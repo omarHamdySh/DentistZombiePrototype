@@ -38,7 +38,7 @@ public class WashingState : IGameplayState
         /// other logic related to exiting the this state also goes here
         /// </summary>
         GameManager.Instance.toothEffect.Stop();
-
+        GameManager.Instance.toothPasteGameObjct.SetActive(false);
         GameManager.Instance.disableWashingTools();
     }
 
