@@ -58,12 +58,7 @@ public class WashingState : IGameplayState
         if (GameManager.Instance.DirtyTeeth.Count <= 0)
         {
             GameManager.Instance.declareWashingProcessEnd();
-            //Activate the shield.
-            //Change the state back again to fighting state.
         }
-
-        
-
     }
     string ToString()
     {

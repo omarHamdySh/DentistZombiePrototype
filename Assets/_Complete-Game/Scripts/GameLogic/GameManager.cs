@@ -176,6 +176,11 @@ public class GameManager : MonoBehaviour
     public void declareWashingProcessEnd()
     {
         print("Washing process has ended");
+        if((int) currentLevel == 4)
+        {
+            TutorialManager.Instance.playThisSequence(TutorialEvent.SweetDreams);
+            return;
+        }
         ToothDecayManager.isSheildActivated = true;
         OnWashingFinish.Raise();
         OnSheildActivation.Raise();
