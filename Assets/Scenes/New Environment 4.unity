@@ -37,8 +37,13 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
+<<<<<<< Updated upstream
   m_Sun: {fileID: 1406026010}
   m_IndirectSpecularColor: {r: 0.7048955, g: 0.85534286, b: 1.2212209, a: 1}
+=======
+  m_Sun: {fileID: 1645755308}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11257,7 +11262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialEvent: 3
   animationClip: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 212294292}
   messageHeader: 
   messageContent: 
 --- !u!1 &219072132
@@ -17143,7 +17148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialEvent: 15
   animationClip: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 303439751}
   messageHeader: 
   messageContent: 
 --- !u!1 &304381549
@@ -22419,7 +22424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialEvent: 4
   animationClip: 0
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 339975327}
   messageHeader: 
   messageContent: 
 --- !u!1 &340894306
