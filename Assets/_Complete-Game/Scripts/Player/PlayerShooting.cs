@@ -27,6 +27,8 @@ namespace CompleteProject
             // Create a layer mask for the Shootable layer.
             shootableMask = LayerMask.GetMask("Shootable");
             controllerEvent.TriggerPressed += new ControllerInteractionEventHandler(doTriggerPressed);
+            controllerEvent.TriggerAxisChanged += new ControllerInteractionEventHandler(doTriggerPressed);
+            controllerEvent.TriggerReleased += new ControllerInteractionEventHandler(disableEffectsOnTriggerReleased);
             // Set up the references.
             gunParticles = GetComponent<ParticleSystem>();
             gunLine = GetComponent<LineRenderer>();
@@ -38,7 +40,6 @@ namespace CompleteProject
         private void doTriggerPressed(object sender, ControllerInteractionEventArgs e)
         {
             Shoot();
-
         }
 
         void Update()
@@ -51,29 +52,34 @@ namespace CompleteProject
                 // ... disable the effects.
                 DisableEffects();
             }
-            //#if !MOBILE_INPUT
-            //            // If the Fire1 button is being press and it's time to fire...
-            //			if(Input.GetButton ("Fire1") && timer >= timeBetweenBullets && Time.timeScale != 0)
-            //            {
-            //                // ... shoot the gun.
-            //                Shoot ();
-            //            }
-            //#else
-            //            // If there is input on the shoot direction stick and it's time to fire...
-            //            if ((CrossPlatformInputManager.GetAxisRaw("Mouse X") != 0 || CrossPlatformInputManager.GetAxisRaw("Mouse Y") != 0) && timer >= timeBetweenBullets)
-            //            {
-            //                // ... shoot the gun
-            //                Shoot();
-            //            }
-            //#endif
-            //            // If the timer has exceeded the proportion of timeBetweenBullets that the effects should be displayed for...
-            //            if(timer >= timeBetweenBullets * effectsDisplayTime)
-            //            {
-            //                // ... disable the effects.
-            //                DisableEffects ();
-            //            }
+#if !MOBILE_INPUT
+            // If the Fire1 button is being press and it's time to fire...
+//            if (/*Input.GetButton("Fire1")*/  controllerEvent.triggerTouched  && timer >= timeBetweenBullets && Time.timeScale != 0)
+//            {
+//                // ... shoot the gun.
+//                Shoot();
+//            }
+//#else
+//                        // If there is input on the shoot direction stick and it's time to fire...
+//                        if ((CrossPlatformInputManager.GetAxisRaw("Mouse X") != 0 || CrossPlatformInputManager.GetAxisRaw("Mouse Y") != 0) && timer >= timeBetweenBullets)
+//                        {
+//                            // ... shoot the gun
+//                            Shoot();
+//                        }
+#endif
+//            // If the timer has exceeded the proportion of timeBetweenBullets that the effects should be displayed for...
+//            if (timer >= timeBetweenBullets * effectsDisplayTime)
+//            {
+//                // ... disable the effects.
+//                DisableEffects();
+//            }
         }
 
+        private void disableEffectsOnTriggerReleased(object sender, ControllerInteractionEventArgs e)
+        {
+            //            // Add the time since Update was last called to the timer.
+            DisableEffects();
+        }
 
         public void DisableEffects()
         {

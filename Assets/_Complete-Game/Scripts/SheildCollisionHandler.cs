@@ -29,9 +29,10 @@ public class SheildCollisionHandler : MonoBehaviour
                 this.gameObject.SetActive(false);
 
                 TutorialManager.Instance.playThisSequence(TutorialEvent.SheildDestraction);
-                //Kill the enemy here 
-                collision.gameObject.GetComponent<CompleteProject.EnemyHealth>().killTheEnemy();
             }
+            TutorialManager.Instance.playThisSequence(TutorialEvent.Attention);
+            //Kill the enemy here 
+            collision.gameObject.GetComponent<CompleteProject.EnemyHealth>().killTheEnemy();
         }
     }
 }
