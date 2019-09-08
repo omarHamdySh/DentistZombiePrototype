@@ -10,10 +10,10 @@ namespace CompleteProject
         public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
         public AudioClip deathClip;                 // The sound to play when the enemy dies.
 
-       EnemyAnimationFSM enemyAnimation;
+        EnemyAnimationFSM enemyAnimation;
         Animator anim;                              // Reference to the animator.
         AudioSource enemyAudio;                     // Reference to the audio source.
-        ParticleSystem hitParticles;                // Reference to the particle system that plays when the enemy is damaged.
+        ParticleSystem deathParticles;                // Reference to the particle system that plays when the enemy is damaged.
         CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
         UnityEngine.AI.NavMeshAgent navMeshAgent;
         bool isDead;                                // Whether the enemy is dead.
@@ -26,7 +26,7 @@ namespace CompleteProject
             enemyAnimation = GetComponent<EnemyAnimationFSM>();
             anim = GetComponent<Animator>();
             enemyAudio = GetComponent<AudioSource>();
-            hitParticles = GetComponentInChildren<ParticleSystem>();
+            deathParticles = GetComponentInChildren<ParticleSystem>();
             capsuleCollider = GetComponent<CapsuleCollider>();
 
             // Setting the current health when the enemy first spawns.
@@ -61,10 +61,10 @@ namespace CompleteProject
             currentHealth -= amount;
 
             // Set the position of the particle system to where the hit was sustained.
-            hitParticles.transform.position = hitPoint;
+            deathParticles.transform.position = hitPoint;
 
             // And play the particles.
-            hitParticles.Play();
+            deathParticles.Play();
 
             if (currentHealth <= 0)
             {
@@ -121,7 +121,7 @@ namespace CompleteProject
         public void DetermineTheDistanceBetweenPlayerAndEnemy()
         {
 
-           // Vector3 distance = Vector3.Distance();
+            // Vector3 distance = Vector3.Distance();
 
         }
     }

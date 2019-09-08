@@ -13,15 +13,18 @@ public class FightingState : IGameplayState
     /// </summary>
     public GameplayFSMManager gameplayFSMManager;
 
+    public float timeToCheering = 3f;            // How long between each spawn.
+    private float counter = 0;
     public void OnStateEnter()
     {
         //Enable the spawning scripts of the enemies;
         //Turn off the other states' controllers and turn on this state's controller
         GameManager.Instance.enemySpawingPointManager.SetActive(true);
+        TutorialManager.Instance.playThisSequence(TutorialEvent.AttackStarted);
         GameManager.Instance.enableFightingTools();
         Debug.Log(this.ToString());
     }
-    
+
     public void OnStateExit()
     {
         /// <summary>
@@ -40,6 +43,12 @@ public class FightingState : IGameplayState
 
     public void OnStateUpdate()
     {
+        counter += Time.deltaTime;
+        if (counter >= timeToCheering)
+        {
+            counter = 0;
+            TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringPerfact);
+        }
     }
     string ToString()
     {

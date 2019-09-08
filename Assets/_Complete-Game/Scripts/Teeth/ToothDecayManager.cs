@@ -27,6 +27,7 @@ public class ToothDecayManager : MonoBehaviour
     public bool testingBrushes;
     public TextMeshProUGUI testText;
     bool isHittedFlag = true;
+
     private void Start()
     {
         instance = GetComponent<ToothDecayManager>();
@@ -51,7 +52,6 @@ public class ToothDecayManager : MonoBehaviour
             GameManager.Instance.DirtyTeeth.Add(this.gameObject);
         }
     }
-
     private void OnCollisionEnter(Collision collision)
     {
         //if (collision.gameObject.tag == "Enemy")
@@ -92,7 +92,6 @@ public class ToothDecayManager : MonoBehaviour
     {
 
     }
-
     private void OnCollisionExit(Collision collision)
     {
         if (testText)
@@ -138,7 +137,6 @@ public class ToothDecayManager : MonoBehaviour
             washingSecondsTimer += Time.deltaTime;
         }
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "ToothPaste")
@@ -183,6 +181,21 @@ public class ToothDecayManager : MonoBehaviour
         thisToothRenderer.material = toothMaterials[0];
         isHittedFlag = true;
         GameManager.Instance.DirtyTeeth.Remove(this.gameObject);
+        switch (TeethHited)
+        {
+            case 2:
+                TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringBeautiful);
+                break;
+            case 4:
+                TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringBeautiful);
+                break;
+            case 6:
+                TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringBeautiful);
+                break;
+            case 8:
+                TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringBeautiful);
+                break;
+        }
     }
 
     private void OnTriggerExit(Collider other)

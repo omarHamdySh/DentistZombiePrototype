@@ -14,6 +14,15 @@ public class SheildCollisionHandler : MonoBehaviour
         {
             ++sheildHitsCounter;
 
+            if (sheildHitsCounter == 3)
+            {
+                TutorialManager.Instance.playThisSequence(TutorialEvent.WhenInjured);
+            }
+            else
+            {
+                TutorialManager.Instance.playThisSequence(TutorialEvent.Attention);
+            }
+
             if (sheildHitsCounter >= sheildPowerCounts)
             {
                 GameManager.Instance.OnSheildDeactivation.Raise();
@@ -30,7 +39,7 @@ public class SheildCollisionHandler : MonoBehaviour
 
                 TutorialManager.Instance.playThisSequence(TutorialEvent.SheildDestraction);
             }
-            TutorialManager.Instance.playThisSequence(TutorialEvent.Attention);
+            
             //Kill the enemy here 
             collision.gameObject.GetComponent<CompleteProject.EnemyHealth>().killTheEnemy();
         }
