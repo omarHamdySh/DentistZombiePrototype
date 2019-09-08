@@ -179,6 +179,7 @@ public class GameManager : MonoBehaviour
         if((int) currentLevel == 4)
         {
             TutorialManager.Instance.playThisSequence(TutorialEvent.SweetDreams);
+            disableWashingTools();
             return;
         }
         ToothDecayManager.isSheildActivated = true;

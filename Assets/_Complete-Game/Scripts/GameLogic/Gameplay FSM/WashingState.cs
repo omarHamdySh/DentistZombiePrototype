@@ -13,7 +13,7 @@ public class WashingState : IGameplayState
     /// </summary>
     public GameplayFSMManager gameplayFSMManager;
 
-    public float timeToCheeringBeautiful = 3f;            
+    public float timeToCheeringBeautiful = 5f;            
     private float counter = 0;
 
     public void OnStateEnter()
@@ -50,7 +50,7 @@ public class WashingState : IGameplayState
         counter += Time.deltaTime;
         if (counter >= timeToCheeringBeautiful)
         {
-            TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringPerfact);
+            TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringBeautiful);
             counter = 0;
         }
 
