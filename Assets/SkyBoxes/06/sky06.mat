@@ -52,7 +52,7 @@ Material:
     - _Exposure: 6.84
     - _Rotation: 0
     - _SunDisk: 2
-    - _SunSize: 0.376
+    - _SunSize: 0.05
     - _SunSizeConvergence: 4.38
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
