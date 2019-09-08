@@ -181,21 +181,7 @@ public class ToothDecayManager : MonoBehaviour
         thisToothRenderer.material = toothMaterials[0];
         isHittedFlag = true;
         GameManager.Instance.DirtyTeeth.Remove(this.gameObject);
-        switch (TeethHited)
-        {
-            case 2:
-                TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringBeautiful);
-                break;
-            case 4:
-                TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringBeautiful);
-                break;
-            case 6:
-                TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringBeautiful);
-                break;
-            case 8:
-                TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringBeautiful);
-                break;
-        }
+       
     }
 
     private void OnTriggerExit(Collider other)

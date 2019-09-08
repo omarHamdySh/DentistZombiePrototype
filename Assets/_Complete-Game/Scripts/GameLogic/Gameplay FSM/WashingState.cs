@@ -13,6 +13,9 @@ public class WashingState : IGameplayState
     /// </summary>
     public GameplayFSMManager gameplayFSMManager;
 
+    public float timeToCheeringBeautiful = 3f;            
+    private float counter = 0;
+
     public void OnStateEnter()
     {
         GameManager.Instance.toothPasteGameObjct.GetComponent<MeshRenderer>().enabled = true;
@@ -44,6 +47,13 @@ public class WashingState : IGameplayState
 
     public void OnStateUpdate()
     {
+        counter += Time.deltaTime;
+        if (counter >= timeToCheeringBeautiful)
+        {
+            TutorialManager.Instance.playThisSequence(TutorialEvent.CheeringPerfact);
+            counter = 0;
+        }
+
         //Follow patroling path route.
         if (GameManager.Instance.DirtyTeeth.Count <= 0)
         {
@@ -51,6 +61,8 @@ public class WashingState : IGameplayState
             //Activate the shield.
             //Change the state back again to fighting state.
         }
+
+        
 
     }
     string ToString()
